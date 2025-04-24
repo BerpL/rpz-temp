@@ -1,0 +1,27 @@
+.submenu-enter {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+}
+
+.submenu-enter-active {
+  max-height: 500px; /* Ajusta según sea necesario */
+  opacity: 1;
+  transform: translateY(0);
+  transition: max-height 300ms ease-out, opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.submenu-exit {
+  max-height: 500px; /* Ajusta según sea necesario */
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+}
+
+.submenu-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 300ms ease-in, opacity 300ms ease-in, transform 300ms ease-in;
+}

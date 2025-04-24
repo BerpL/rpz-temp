@@ -1,0 +1,2735 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="142.6735142501259" scrolly="85.82726967311146" scale="0.4792239624591221">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="x%ynI^z}Ei7v/a[h:,Lr" x="210" y="-10">
+      <field name="LOAD_COMP_ASSETS">TRUE</field>
+      <field name="FULLSCREEN">FALSE</field>
+      <field name="BKG_TRANSPARENCY">FALSE</field>
+      <field name="PRESERVE_DRAW_BUF">TRUE</field>
+      <field name="FADE_ANNOTATIONS">FALSE</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="AJ8tG(Jc(tg8Md#+ou95" x="210" y="170">
+      <field name="NAME">pantalla_mobil_horinzontal</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setHTMLElemStyle" id="h}l,zpv}x?j8KdRnvD#J">
+          <field name="PROPERTY">display</field>
+          <field name="PARENT">TRUE</field>
+          <value name="VALUE">
+            <shadow type="displayDropdown" id="N+nfpTv``j9XLnR|w_OK">
+              <field name="TEXT">none</field>
+            </shadow>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="OWsyj$sop,ErbUf!Rj5H">
+              <field name="TEXT">aviso_celular</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="*Cvx0YiY1-E+)+~6`hDA" x="210" y="270">
+      <field name="NAME">pantalla_mobil_vertical</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="setHTMLElemStyle" id="bNkK)72q.gzu|Js`s$;!">
+          <field name="PROPERTY">display</field>
+          <field name="PARENT">TRUE</field>
+          <value name="VALUE">
+            <shadow type="displayDropdown" id="5w@k9SKU?/DxrP%Am{dw">
+              <field name="TEXT">flex</field>
+            </shadow>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="G~W6;aPeGWWqn3CWkeBs">
+              <field name="TEXT">aviso_celular</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="A{@MviQ8OM,3%KQ3$=7." x="210" y="370">
+      <field name="NAME">pantalla_mobil</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="controls_if" id="8V!juCI?C-[!_dBi+]F,">
+          <value name="IF0">
+            <block type="logic_compare" id="F*kyDtJF^e8pMBo8)!3X">
+              <field name="OP">LT</field>
+              <value name="A">
+                <block type="getHTMLElemAttribute" id="HL~9^K}W~-eu|R6*.4=s">
+                  <field name="ATTRIBUTE">innerWidth</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="ID">
+                    <shadow type="text" id="{b+fB8{5yl7FZhDGhOD/">
+                      <field name="TEXT">myElem</field>
+                    </shadow>
+                    <block type="DOMObjectSelector" id="%QC#UAH$0shfA!o{^A)i">
+                      <field name="DOM_OBJECT">WINDOW</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <block type="getHTMLElemAttribute" id=":8l.JE1MI-|He8s!uQ66">
+                  <field name="ATTRIBUTE">innerHeight</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="ID">
+                    <shadow type="text" id="92jkG`I,*#|hWzK^I{r$">
+                      <field name="TEXT">myElem</field>
+                    </shadow>
+                    <block type="DOMObjectSelector" id="HXnqz-RPgMfcDB0_]n0/">
+                      <field name="DOM_OBJECT">WINDOW</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="procedures_callnoreturn" id="`yLu=.9)C/$sik)[v0!^">
+              <mutation name="pantalla_mobil_vertical"></mutation>
+            </block>
+          </statement>
+          <next>
+            <block type="execScript" id="SF`9Jem/|wmlucedshqm">
+              <value name="TEXT">
+                <shadow type="textMultiline" id="`Nk51e%`s(eE?]Fxpzhw">
+                  <field name="HIGHLIGHT_MODE">javascript</field>
+                  <field name="TEXT" editor-height="9" editor-width="901">window.addEventListener('resize', function() {&amp;#10;    if (window.innerWidth &gt; window.innerHeight) {&amp;#10;        v3d.puzzles.procedures["pantalla_mobil_horinzontal"]();&amp;#10;    } else {&amp;#10;        v3d.puzzles.procedures["pantalla_mobil_vertical"]();&amp;#10;    }    }&amp;#10;});&amp;#10;});&amp;#10;</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="removeHTMLElement" id="Lgl2dWj2Q:DYp2*t=c{5">
+                  <field name="PARENT">TRUE</field>
+                  <value name="ID">
+                    <shadow type="text" id="m%Cip|%~W0m2EsA(KcU+">
+                      <field name="TEXT">ayuda</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="removeHTMLElement" id="9XJE-wT(~v1SPM9%3}`U">
+                      <field name="PARENT">TRUE</field>
+                      <value name="ID">
+                        <shadow type="text" id="Da#BwH)J[$gLv%9UA(Rk">
+                          <field name="TEXT">ayudaContainer</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id=";2?EG,du9xROWqG|oSlS" x="210" y="790">
+      <field name="NAME">pantalla_web</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="removeHTMLElement" id="Oq5$Zivs%|~Gi?;!P01s">
+          <field name="PARENT">TRUE</field>
+          <value name="ID">
+            <shadow type="text" id="A.Lu0Pz$~q4@,@{TwJNq">
+              <field name="TEXT">ayudaMovil</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="removeHTMLElement" id="S{GSW`eZ=~];JQq;5~m]">
+              <field name="PARENT">TRUE</field>
+              <value name="ID">
+                <shadow type="text" id="%tGA+lt~itEoTNfwdSi+">
+                  <field name="TEXT">ayudaMovilContainer</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="sx7i}uWYgeL-:]C68Nv{" x="210" y="930">
+      <statement name="DO_PROGRESS">
+        <block type="setHTMLElemAttribute" id="AmZ%l`^+s#NX@*Fy7lEw">
+          <field name="ATTRIBUTE">innerHTML</field>
+          <field name="PARENT">TRUE</field>
+          <value name="VALUE">
+            <block type="text_join" id="K7}S}jFPp6tX@:xmCg@?">
+              <mutation items="2"></mutation>
+              <value name="ADD0">
+                <block type="percentage" id="r)MZpuNmthUJbj]1^?Qc"></block>
+              </value>
+              <value name="ADD1">
+                <block type="text" id="8_EBJpj(}wZ*P0:SvQh7">
+                  <field name="TEXT">%</field>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text" id=")M0x~e%{hrvaC^%M7opJ">
+              <field name="TEXT"></field>
+            </shadow>
+            <block type="text" id="iM*,k9Ue21LK_sl])s`1">
+              <field name="TEXT">loading_percentage</field>
+            </block>
+          </value>
+          <next>
+            <block type="setHTMLElemAttribute" id="{}~|BYloqS+{`}{HWC~U">
+              <field name="ATTRIBUTE">style</field>
+              <field name="PARENT">TRUE</field>
+              <value name="VALUE">
+                <block type="text_join" id="%DQ#0ZuX57d2IOj]I?Zr">
+                  <mutation items="3"></mutation>
+                  <value name="ADD0">
+                    <block type="text" id="cDD~9{qU{=g|lw)Fckcu">
+                      <field name="TEXT">stroke-dashoffset:</field>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="math_arithmetic" id="M|,vL-EmN{z!]Rx3*3y]">
+                      <field name="OP">MINUS</field>
+                      <value name="A">
+                        <shadow type="math_number" id="`v7R=zSMj9zS/zL.N+?*">
+                          <field name="NUM">472</field>
+                        </shadow>
+                      </value>
+                      <value name="B">
+                        <shadow type="math_number" id="-~@:#kPtq!)GQkqDY=^`">
+                          <field name="NUM">2</field>
+                        </shadow>
+                        <block type="math_arithmetic" id="b6y~G,]~bJ0YPjflT5[)">
+                          <field name="OP">MULTIPLY</field>
+                          <value name="A">
+                            <shadow type="math_number" id=".$YSRh/ZyV-yVR`A~x-R">
+                              <field name="NUM">472</field>
+                            </shadow>
+                          </value>
+                          <value name="B">
+                            <shadow type="math_number" id="xz,lqo=]LPpLp@!1kP.@">
+                              <field name="NUM">2</field>
+                            </shadow>
+                            <block type="math_arithmetic" id="6akBz*3~SO|sMKd}e?kR">
+                              <field name="OP">DIVIDE</field>
+                              <value name="A">
+                                <shadow type="math_number" id="k%%e0a*aO:`whg4xl,!:">
+                                  <field name="NUM">2</field>
+                                </shadow>
+                                <block type="percentage" id="h%,#bH;%7txYny]kzUhv"></block>
+                              </value>
+                              <value name="B">
+                                <shadow type="math_number" id="!53YwlBp`S=0vvyZD?~Q">
+                                  <field name="NUM">100</field>
+                                </shadow>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="ADD2">
+                    <block type="text" id="uOTug^Ut/@2DH;rGhMSN">
+                      <field name="TEXT">;</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="_ylly(PTvfkmF@Qy11N)">
+                  <field name="TEXT"></field>
+                </shadow>
+                <block type="text" id="Yj$8x9C2eb#,GevIxX;8">
+                  <field name="TEXT">circle</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <statement name="DO_END">
+        <block type="execScript" id="Wr=l3[(=st^j:}7uBTZ)">
+          <value name="TEXT">
+            <shadow type="textMultiline" id=":-Rbn4R9jQ-mrtP9GzU]">
+              <field name="HIGHLIGHT_MODE">javascript</field>
+              <field name="TEXT" editor-height="11" editor-width="901">// Detectar si es un dispositivo móvil&amp;#10;if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {&amp;#10;    v3d.puzzles.procedures["pantalla_mobil"]();&amp;#10;} else {&amp;#10;    v3d.puzzles.procedures["pantalla_web"]();&amp;#10;}&amp;#10;</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="setHTMLElemStyle" id="/g,#505Y9F_alcSzs1_4">
+              <field name="PROPERTY">display</field>
+              <field name="PARENT">TRUE</field>
+              <value name="VALUE">
+                <shadow type="displayDropdown" id=".{hC3b74Ov9Mh/WpMcCZ">
+                  <field name="TEXT">flex</field>
+                </shadow>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="o4gs/ux.ie;9!fp0s4:l">
+                  <field name="TEXT">logo</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="setHTMLElemStyle" id="zNH1-i)jHz9eAC23)qc,">
+                  <field name="PROPERTY">display</field>
+                  <field name="PARENT">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="displayDropdown" id="na3swIXo_nie[z(/FpbS">
+                      <field name="TEXT">flex</field>
+                    </shadow>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text" id="?;jjiS@bdLL^@:$~n~a:">
+                      <field name="TEXT">menu</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="setHTMLElemStyle" id="[LcJ;k#AdGlJMMu6a2gF">
+                      <field name="PROPERTY">display</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="VALUE">
+                        <shadow type="displayDropdown" id="e5TrVS%*8b+SD](W]qHO">
+                          <field name="TEXT">flex</field>
+                        </shadow>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="kWWzsi%ASwA1QYM1V4D4">
+                          <field name="TEXT">ayudas</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="general" type="CommonTab" active="false" scrollx="149.61816062929393" scrolly="250.21372484033827" scale="0.7037802038446168">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="vh8cXs2Fi_ahboKb]hqj">lang</variable>
+      <variable id="Kox+/$.mUs{e]f^sC=5$">sonido</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="zK-@f|P5K]u.;P6/x[0_" x="150" y="11">
+      <field name="EVENT">click</field>
+      <field name="PARENT">TRUE</field>
+      <value name="ID">
+        <shadow type="text" id=")30{I)[@_0+Z~;}[Xvzl">
+          <field name="TEXT">btn_back</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="openWebPage" id="a+Fh.sI.+:*(J=-;-%B+">
+          <field name="MODE">PARENT</field>
+          <value name="URL">
+            <shadow type="text" id="6#w+4|xCT,pZ3pYr%WCX">
+              <field name="TEXT">https://rosh-pinah-zinc.vercel.app</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="setHTMLElemStyle" id="54!}2P)+nNZazG{d2b.E">
+          <field name="PROPERTY">cursor</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <shadow type="cursorDropdown" id="mexcU2X^|Qwtd?7:`,[y">
+              <field name="TEXT">grab</field>
+            </shadow>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="jP2[b4m0d^6WUU!]8oCA">
+              <field name="TEXT">body_admision</field>
+            </shadow>
+            <block type="DOMObjectSelector" id="{NOW1,S]uQJ.S5P~~6*M">
+              <field name="DOM_OBJECT">BODY</field>
+            </block>
+          </value>
+          <next>
+            <block type="eventHTMLElem" id="F[6N%^VUytnX?mY!xBI!">
+              <field name="EVENT">mousedown</field>
+              <field name="PARENT">FALSE</field>
+              <value name="ID">
+                <shadow type="text" id="i~U#nc_|,+.-Wyi@wa#t">
+                  <field name="TEXT">myElem</field>
+                </shadow>
+                <block type="DOMObjectSelector" id="7UBxNet;{S:,w?mebYe!">
+                  <field name="DOM_OBJECT">BODY</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="setHTMLElemStyle" id="Jf+sFRw8Jh-T;!C2Hnmz">
+                  <field name="PROPERTY">cursor</field>
+                  <field name="PARENT">FALSE</field>
+                  <value name="VALUE">
+                    <shadow type="cursorDropdown" id="20/xAFSDyKAz5BTjI?f8">
+                      <field name="TEXT">grabbing</field>
+                    </shadow>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text" id="/:/Ig#ej4!@iSS$AV5$P">
+                      <field name="TEXT">body_admision</field>
+                    </shadow>
+                    <block type="DOMObjectSelector" id="eI|Y|9;Xul^x,h1E@.)8">
+                      <field name="DOM_OBJECT">BODY</field>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="setHTMLElemStyle" id="HqD[9~8OiegN(=*|a#%g">
+                  <field name="PROPERTY">backgroundColor</field>
+                  <field name="PARENT">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="text" id="pC;-X6X1qE=%VrTj(=0G">
+                      <field name="TEXT">rgba(8, 167, 255, 0.8)</field>
+                    </shadow>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text" id="8g@NKxU:o@c~.zNPJP)d">
+                      <field name="TEXT">paso1</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="eventHTMLElem" id="vn;Rv6}m`OH9,({eh[PB">
+                      <field name="EVENT">mouseup</field>
+                      <field name="PARENT">FALSE</field>
+                      <value name="ID">
+                        <shadow type="text" id="@PmyVAGi#X9]PD_Ti@;z">
+                          <field name="TEXT">myElem</field>
+                        </shadow>
+                        <block type="DOMObjectSelector" id="Ijf^B1D/W|450z+2d(Dl">
+                          <field name="DOM_OBJECT">BODY</field>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="setHTMLElemStyle" id="33B$QrDBn__oJ(P@ORp[">
+                          <field name="PROPERTY">cursor</field>
+                          <field name="PARENT">FALSE</field>
+                          <value name="VALUE">
+                            <shadow type="cursorDropdown" id="+sUx,{1KT@9:2dI8]Stb">
+                              <field name="TEXT">grab</field>
+                            </shadow>
+                          </value>
+                          <value name="ID">
+                            <shadow type="text" id="C%aSPfhPsK]yHHp+|Y04">
+                              <field name="TEXT">body_admision</field>
+                            </shadow>
+                            <block type="DOMObjectSelector" id="z+Rr!HS:i:JOP`Iw7(sX">
+                              <field name="DOM_OBJECT">BODY</field>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="createCSSRule" id="uk$_u-`#]|^^2D12EbIs">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                          <field name="PARENT">FALSE</field>
+                          <value name="CSS_RULE">
+                            <shadow type="text" id="5i:dUI2-,*hha`)$w|YG">
+                              <field name="TEXT">.en</field>
+                            </shadow>
+                          </value>
+                          <value name="CSS_RULE_CONT">
+                            <shadow type="cssStyleList" id="ra?794i8h?d(/cOqf,mf">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml">
+                                <prop name="display" shadowvalue="block"></prop>
+                              </mutation>
+                              <value name="PROP0">
+                                <shadow type="displayDropdown" id="fcd^u_nK^F@HI%8GIo%b">
+                                  <field name="TEXT">flex</field>
+                                </shadow>
+                              </value>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="createCSSRule" id="[MgZj=S5gi*.aq:-eA#7">
+                              <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                              <field name="PARENT">FALSE</field>
+                              <value name="CSS_RULE">
+                                <shadow type="text" id="1.wsdf!FeqjC!:HE[4RQ">
+                                  <field name="TEXT">.es</field>
+                                </shadow>
+                              </value>
+                              <value name="CSS_RULE_CONT">
+                                <shadow type="cssStyleList" id="qv.ZapZ^t{V9Mbd^n3]Y">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml">
+                                    <prop name="display" shadowvalue="block"></prop>
+                                  </mutation>
+                                  <value name="PROP0">
+                                    <shadow type="displayDropdown" id="qy{PiNgG+tS=pNU`Q`!#">
+                                      <field name="TEXT">none</field>
+                                    </shadow>
+                                  </value>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="variables_set" id="cz[c^gHEhRJQjE-OxStS">
+                                  <field name="VAR" id="vh8cXs2Fi_ahboKb]hqj">lang</field>
+                                  <value name="VALUE">
+                                    <block type="text" id=")4=@C2Go$=meJOj!]`xK">
+                                      <field name="TEXT">en</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="eventHTMLElem" id="=06XUG*YY?h:IYg3k_3%">
+                                      <field name="EVENT">click</field>
+                                      <field name="PARENT">TRUE</field>
+                                      <value name="ID">
+                                        <shadow type="text" id="c||KWn;i=yGO~|*X5-==">
+                                          <field name="TEXT">btn_lang</field>
+                                        </shadow>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="controls_if" id="8ilECJrKCr6$`$Y4@mff">
+                                          <mutation elseif="1"></mutation>
+                                          <value name="IF0">
+                                            <block type="logic_compare" id="ORJL4J?}hZiSrh1P*m#R">
+                                              <field name="OP">EQ</field>
+                                              <value name="A">
+                                                <block type="variables_get" id="^nE$.]7{gu:Rwv,P|s/D">
+                                                  <field name="VAR" id="vh8cXs2Fi_ahboKb]hqj">lang</field>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="text" id="$wxlD{pn`~T_^cUkbWE?">
+                                                  <field name="TEXT">es</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="variables_set" id="iwmF3)^=D#Q_Ex]`A:-h">
+                                              <field name="VAR" id="vh8cXs2Fi_ahboKb]hqj">lang</field>
+                                              <value name="VALUE">
+                                                <block type="text" id=",)rVWH3|u}?b[FnNXxZO">
+                                                  <field name="TEXT">en</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="setCSSRuleStyle" id=")l{e_SMpZ+khm;sf$pm*">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                  <field name="PROPERTY">display</field>
+                                                  <field name="PARENT">TRUE</field>
+                                                  <value name="VALUE">
+                                                    <shadow type="displayDropdown" id="$KB7se)o@EFd7=.CL,bc">
+                                                      <field name="TEXT">block</field>
+                                                    </shadow>
+                                                    <block type="text" id="MiF5rS7zXB|noK%15|Lp">
+                                                      <field name="TEXT">flex</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ID">
+                                                    <shadow type="text" id=";-`_]S*uVCHc:+:60C|8">
+                                                      <field name="TEXT">.en</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <next>
+                                                    <block type="setCSSRuleStyle" id="mzX,(Q]~1i;%?s6lKYpw">
+                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                      <field name="PROPERTY">display</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="VALUE">
+                                                        <shadow type="displayDropdown" id="fhtZC-!:AW]:%X]dm{`1">
+                                                          <field name="TEXT">block</field>
+                                                        </shadow>
+                                                        <block type="text" id="?I(P4:wh(pvBB![Sv$TC">
+                                                          <field name="TEXT">none</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text" id="`{xfxNjos(yKbz~6[:%5">
+                                                          <field name="TEXT">.es</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="setCSSRuleStyle" id="?rcY0gmls_ZDTJ}eL%(1">
+                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                          <field name="PROPERTY">display</field>
+                                                          <field name="PARENT">FALSE</field>
+                                                          <value name="VALUE">
+                                                            <shadow type="displayDropdown" id="X|A6)`;a/}$g|e3i8#2Q">
+                                                              <field name="TEXT">block</field>
+                                                            </shadow>
+                                                            <block type="text" id="Z1QSp+v(_bwx.UpH==2L">
+                                                              <field name="TEXT">flex</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ID">
+                                                            <shadow type="text" id="4rEE]CDNx*K2+OobY9gO">
+                                                              <field name="TEXT">.en</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <next>
+                                                            <block type="setCSSRuleStyle" id=";u(@!0f`3Dvd^{2+.VS%">
+                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                              <field name="PROPERTY">display</field>
+                                                              <field name="PARENT">FALSE</field>
+                                                              <value name="VALUE">
+                                                                <shadow type="displayDropdown" id="iRfStFR=tF[?djdWfiv6">
+                                                                  <field name="TEXT">block</field>
+                                                                </shadow>
+                                                                <block type="text" id="j5sqAWV7UPW+U;m^i1m%">
+                                                                  <field name="TEXT">none</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ID">
+                                                                <shadow type="text" id="]:T@hm!f8@|4YzHmsH8b">
+                                                                  <field name="TEXT">.es</field>
+                                                                </shadow>
+                                                              </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                          <value name="IF1">
+                                            <block type="logic_compare" id="~-Dbe%8]8)Y*Nw.JD/2R">
+                                              <field name="OP">EQ</field>
+                                              <value name="A">
+                                                <block type="variables_get" id=",Qykxq(egVYKBE-n,Q2:">
+                                                  <field name="VAR" id="vh8cXs2Fi_ahboKb]hqj">lang</field>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="text" id="IxJf(wg_s/kgJ/A,I{er">
+                                                  <field name="TEXT">en</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO1">
+                                            <block type="variables_set" id="6m9RZxd9EqC^EIk~O$1;">
+                                              <field name="VAR" id="vh8cXs2Fi_ahboKb]hqj">lang</field>
+                                              <value name="VALUE">
+                                                <block type="text" id="S0L5D!DNC/I1c3v,NA9,">
+                                                  <field name="TEXT">es</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="setCSSRuleStyle" id="|A5.{D*OL6}Gjs`j5.Ad">
+                                                  <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                  <field name="PROPERTY">display</field>
+                                                  <field name="PARENT">TRUE</field>
+                                                  <value name="VALUE">
+                                                    <shadow type="displayDropdown" id="Sd:E-j8/jG!C^qKasyL(">
+                                                      <field name="TEXT">block</field>
+                                                    </shadow>
+                                                    <block type="text" id="tK~7B+0r@m::G2Q_URt4">
+                                                      <field name="TEXT">flex</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ID">
+                                                    <shadow type="text" id="MLw?1~P(,tDk^_#nN?=p">
+                                                      <field name="TEXT">.es</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <next>
+                                                    <block type="setCSSRuleStyle" id="F0Pd@-ilHMOoQ8kZ3+W|">
+                                                      <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                      <field name="PROPERTY">display</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="VALUE">
+                                                        <shadow type="displayDropdown" id="PQWejgM9cd%j8=?lIvlh">
+                                                          <field name="TEXT">block</field>
+                                                        </shadow>
+                                                        <block type="text" id="((sa@-WKy.#32kD7,hWU">
+                                                          <field name="TEXT">none</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text" id="!H}uHYQWslvv2FmD}lSr">
+                                                          <field name="TEXT">.en</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="setCSSRuleStyle" id="gXqq#b$0W6}%,2r^847D">
+                                                          <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                          <field name="PROPERTY">display</field>
+                                                          <field name="PARENT">FALSE</field>
+                                                          <value name="VALUE">
+                                                            <shadow type="displayDropdown" id="i=4-Lc#-%rs@%uEy,tBQ">
+                                                              <field name="TEXT">block</field>
+                                                            </shadow>
+                                                            <block type="text" id="9IyBT93q/N52._{kpCbj">
+                                                              <field name="TEXT">flex</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ID">
+                                                            <shadow type="text" id="Gd{7s+Fjdv8EdNX1o,S?">
+                                                              <field name="TEXT">.es</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <next>
+                                                            <block type="setCSSRuleStyle" id="e`vuNrJ2wS=ON5}x1|1;">
+                                                              <mutation xmlns="http://www.w3.org/1999/xhtml" mediaruleslot="false"></mutation>
+                                                              <field name="PROPERTY">display</field>
+                                                              <field name="PARENT">FALSE</field>
+                                                              <value name="VALUE">
+                                                                <shadow type="displayDropdown" id="(R=NgVd{CF.Yqmz/?:Ae">
+                                                                  <field name="TEXT">block</field>
+                                                                </shadow>
+                                                                <block type="text" id="7ymtDblXex,]oaR}E@}p">
+                                                                  <field name="TEXT">none</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ID">
+                                                                <shadow type="text" id="|0f*UidDmc?j)py[IAfu">
+                                                                  <field name="TEXT">.en</field>
+                                                                </shadow>
+                                                              </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="variables_set" id="mJO)UHiMDLT%7GihGZ3,">
+                                          <field name="VAR" id="Kox+/$.mUs{e]f^sC=5$">sonido</field>
+                                          <value name="VALUE">
+                                            <block type="logic_boolean" id="zz#K7,9J.B}jvnqY0JPm">
+                                              <field name="BOOL">TRUE</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="eventHTMLElem" id="p@9Lrg6i7^3YMxP#}~Ib">
+                                              <field name="EVENT">click</field>
+                                              <field name="PARENT">TRUE</field>
+                                              <value name="ID">
+                                                <shadow type="text" id="XL]b!vxH54Vz5-a8Y15:">
+                                                  <field name="TEXT">btn_sonido</field>
+                                                </shadow>
+                                              </value>
+                                              <statement name="DO">
+                                                <block type="controls_if" id="BfqL+pl}JikqhedwJj~l">
+                                                  <mutation else="1"></mutation>
+                                                  <value name="IF0">
+                                                    <block type="variables_get" id="I[ymO`3+^kDa^!:#KoYu">
+                                                      <field name="VAR" id="Kox+/$.mUs{e]f^sC=5$">sonido</field>
+                                                    </block>
+                                                  </value>
+                                                  <statement name="DO0">
+                                                    <block type="setHTMLElemAttribute" id="rjl=vkRdhi[6$0|1W=vT">
+                                                      <field name="ATTRIBUTE">src</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="VALUE">
+                                                        <shadow type="text" id="sjnP)79^?}Zka5Ls8i,=">
+                                                          <field name="TEXT">/images/audiono.png</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text" id="!|MRjgXcIKKF:(u[oP+A">
+                                                          <field name="TEXT">btn_sonido_img</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="variables_set" id="3J_]{OyFaU5z*j!(_m0W">
+                                                          <field name="VAR" id="Kox+/$.mUs{e]f^sC=5$">sonido</field>
+                                                          <value name="VALUE">
+                                                            <block type="logic_boolean" id="[er4Zqo4vD]p.K(r^aLs">
+                                                              <field name="BOOL">FALSE</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </statement>
+                                                  <statement name="ELSE">
+                                                    <block type="setHTMLElemAttribute" id="OgrroerjZlN}1;McC8IB">
+                                                      <field name="ATTRIBUTE">src</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="VALUE">
+                                                        <shadow type="text" id="{*Q#cGy,h!J[RV/Q86|F">
+                                                          <field name="TEXT">/images/audio.png</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text" id="b1pr,u8Z?R=!y)Y3^^%M">
+                                                          <field name="TEXT">btn_sonido_img</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="variables_set" id="L{g=HJ+f-!(E/7F-!59Z">
+                                                          <field name="VAR" id="Kox+/$.mUs{e]f^sC=5$">sonido</field>
+                                                          <value name="VALUE">
+                                                            <block type="logic_boolean" id="uv*:^DfIH$UId,f-$qn8">
+                                                              <field name="BOOL">TRUE</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </statement>
+                                                </block>
+                                              </statement>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <tab name="procedures" type="CommonTab" active="false" scrollx="254.80942054370098" scrolly="173.7883489475571" scale="0.6260121018585126">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="yki,}4M@uJvvwM1uROhK">paso</variable>
+      <variable id="+n_]29w3AxU#lEwervR{">img</variable>
+      <variable id="wo,h0=9*+3^I|]?pJB}=">camara</variable>
+      <variable id="(bpDONAln=CXuKeit:5S">camara_direccion</variable>
+      <variable id=";ZkZ{TRtA4hmWkq!CBtO">objeto</variable>
+      <variable id=";ip9Dw?b/u|Eq=Zz64w:">proceso</variable>
+      <variable id="0OJZ7?k~bx42Oq%8.)E;">i</variable>
+      <variable id="]fHPGFhTN3}I.3,ZW.$h">pro1</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="^X4f^/fFku@e|*}P4ZgS" inline="true" disabled="true" x="170" y="-170">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="true" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="=)tAr1+2Q4$u-=KpJt|N">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="allObjectList" id="OcoABX|aQ!_9^#h~()]M"></block>
+      </value>
+      <statement name="DO">
+        <block type="controls_if" id="f3faTY^AN`tf]2`{e`qN">
+          <value name="IF0">
+            <block type="logic_compare" id="htRe3m?kDG3Lq|!Ep:Ix">
+              <field name="OP">NEQ</field>
+              <value name="A">
+                <block type="variables_get" id="XLbK2noy5O=aq_KNt[t6">
+                  <field name="VAR" id="]fHPGFhTN3}I.3,ZW.$h">pro1</field>
+                </block>
+              </value>
+              <value name="B">
+                <block type="pickedObject" id="K4FTQ)7(Ts|/,QFEpvk7"></block>
+              </value>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="outline" id="TrtF4|2nm;{bSkrPbA!:">
+              <field name="DO_WHAT">DISABLE</field>
+              <value name="TARGET">
+                <shadow type="objectList" id="{M}yFWQzT;$b!MgZ5)Yn">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="allObjectList" id="L*~uy![bS{L7i~+Co]M;"></block>
+              </value>
+              <next>
+                <block type="outline" id="ONg.A{dD!nr@[+Nm{|n%">
+                  <field name="DO_WHAT">ENABLE</field>
+                  <value name="TARGET">
+                    <shadow type="objectList" id="7N=O,Mm_7M![PRQW3~xW">
+                      <field name="FIELDNAME">&lt;none&gt;</field>
+                    </shadow>
+                    <block type="pickedObject" id="5)?]zO/T`akRr/~hn5o/"></block>
+                  </value>
+                  <next>
+                    <block type="variables_set" id="B3dDNDNyfI(5zi$v7bXb">
+                      <field name="VAR" id="]fHPGFhTN3}I.3,ZW.$h">pro1</field>
+                      <value name="VALUE">
+                        <block type="pickedObject" id="cj48.`9fMc0?;JMbFBVe"></block>
+                      </value>
+                      <next>
+                        <block type="console.log" id="me_,udGomq,8e.5pR]Gl">
+                          <value name="VALUE">
+                            <shadow type="text" id="=Uh9pi67fq5ec!hqj2]I">
+                              <field name="TEXT">Hello, Verge!</field>
+                            </shadow>
+                            <block type="variables_get" id="IW@);8j2nJnB(wtBv35g">
+                              <field name="VAR" id="]fHPGFhTN3}I.3,ZW.$h">pro1</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="6}fdpU=~u]nA?aQ]mt4:" x="150" y="70">
+      <field name="NAME">reiniciar_pasos</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="outline" id="}UOy2vcpNqB(|GjaP7_L">
+          <field name="DO_WHAT">DISABLE</field>
+          <value name="TARGET">
+            <shadow type="objectList" id="{M}yFWQzT;$b!MgZ5)Yn">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="allObjectList" id="!YdPZcA.USU!7zioW}E4"></block>
+          </value>
+          <next>
+            <block type="controls_for" id="sTi/h%#rmCD)wO9@qf(!">
+              <field name="VAR" id="0OJZ7?k~bx42Oq%8.)E;">i</field>
+              <value name="FROM">
+                <shadow type="math_number" id="](TKfmt{tvFdv+;7;y2v">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <value name="TO">
+                <shadow type="math_number" id="+D*wBI:`hWY!i(0{;s@-">
+                  <field name="NUM">20</field>
+                </shadow>
+              </value>
+              <value name="BY">
+                <shadow type="math_number" id="WM:7a}cR^C3nYme|UGb}">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="setHTMLElemStyle" id="pMf9;,o_`YE^yWkrb($/">
+                  <field name="PROPERTY">backgroundColor</field>
+                  <field name="PARENT">TRUE</field>
+                  <value name="VALUE">
+                    <shadow type="text" id="i%?u@U#h+Z@I:AJImZ#m">
+                      <field name="TEXT">transparent</field>
+                    </shadow>
+                  </value>
+                  <value name="ID">
+                    <shadow type="text" id="7.Ul=]~@yM09~Ixu?0|.">
+                      <field name="TEXT">paso3</field>
+                    </shadow>
+                    <block type="text_join" id="]n/.)2i+3#p]a1BuCfV{">
+                      <mutation items="2"></mutation>
+                      <value name="ADD0">
+                        <block type="text" id="o~qn(Q?4E3svqIj_|k({">
+                          <field name="TEXT">paso</field>
+                        </block>
+                      </value>
+                      <value name="ADD1">
+                        <block type="variables_get" id="e4W,cL*`Ee.g}],xRzMs">
+                          <field name="VAR" id="0OJZ7?k~bx42Oq%8.)E;">i</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="procedures_defnoreturn" id="7Y`ofi#T{uMd?!@7zt)y" x="70" y="310">
+      <mutation>
+        <arg name="paso" varid="yki,}4M@uJvvwM1uROhK"></arg>
+        <arg name="img" varid="+n_]29w3AxU#lEwervR{"></arg>
+        <arg name="camara" varid="wo,h0=9*+3^I|]?pJB}="></arg>
+        <arg name="camara_direccion" varid="(bpDONAln=CXuKeit:5S"></arg>
+        <arg name="objeto" varid=";ZkZ{TRtA4hmWkq!CBtO"></arg>
+      </mutation>
+      <field name="NAME">pasos</field>
+      <comment pinned="false" h="80" w="160">Describe this function...</comment>
+      <statement name="STACK">
+        <block type="variables_set" id="2KKCDU_.tZdNZfpzDa:B">
+          <field name="VAR" id=";ip9Dw?b/u|Eq=Zz64w:">proceso</field>
+          <value name="VALUE">
+            <block type="variables_get" id="t-I6DCJEI7y{B#UT:6t,">
+              <field name="VAR" id="yki,}4M@uJvvwM1uROhK">paso</field>
+            </block>
+          </value>
+          <next>
+            <block type="setHTMLElemAttribute" id="4{58gnG|?hov2#*i,-a%">
+              <field name="ATTRIBUTE">src</field>
+              <field name="PARENT">TRUE</field>
+              <value name="VALUE">
+                <shadow type="text" id="I38:x}`cbT0FG2YJCd!R">
+                  <field name="TEXT">/images/01-1.png</field>
+                </shadow>
+                <block type="variables_get" id="rhc-3$d?w7[:(G3RN(61">
+                  <field name="VAR" id="+n_]29w3AxU#lEwervR{">img</field>
+                </block>
+              </value>
+              <value name="ID">
+                <shadow type="text" id="EnE`Z/uQ8vLwj`CnZx-D">
+                  <field name="TEXT">ModalInformacion</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn" id="vLB.8A)c_PK0UqFLm=qS">
+                  <mutation name="reiniciar_pasos"></mutation>
+                  <next>
+                    <block type="setHTMLElemStyle" id="B31*PceZW#}Im=/q3jS`">
+                      <field name="PROPERTY">backgroundColor</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="VALUE">
+                        <shadow type="text" id="#x%F[ph.4sFpw$WJO!@Z">
+                          <field name="TEXT">rgba(8, 167, 255, 0.8)</field>
+                        </shadow>
+                      </value>
+                      <value name="ID">
+                        <shadow type="text" id="Jov5WtL`CjEKtp_8H+S^">
+                          <field name="TEXT">paso2</field>
+                        </shadow>
+                        <block type="variables_get" id="QpcI-$X(rvl]={Q0l7#t">
+                          <field name="VAR" id="yki,}4M@uJvvwM1uROhK">paso</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="tweenCameraExt" id="VggloMa_~,@DA.NOlmy3">
+                          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="true"></mutation>
+                          <field name="MOVEMENT_TYPE">LINEAR</field>
+                          <value name="POSITION">
+                            <block type="variables_get" id="!;QjhF;9(cX$f)l~yz=8">
+                              <field name="VAR" id="wo,h0=9*+3^I|]?pJB}=">camara</field>
+                            </block>
+                          </value>
+                          <value name="LOOKAT">
+                            <block type="variables_get" id="tNR4^W*KfT9!]KUmq}h-">
+                              <field name="VAR" id="(bpDONAln=CXuKeit:5S">camara_direccion</field>
+                            </block>
+                          </value>
+                          <value name="DURATION">
+                            <shadow type="math_number" id="[o~-3{p8Rriomg#HK6+v">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="outline" id="f/86-?|S(/V;3zbUQDDB">
+                              <field name="DO_WHAT">ENABLE</field>
+                              <value name="TARGET">
+                                <shadow type="objectList" id=".s4Z=D{a~o;|[8AJ{YBQ">
+                                  <field name="FIELDNAME">letreroE_mesh</field>
+                                </shadow>
+                                <block type="variables_get" id="6wx=t7|(38g{7yOH!:R/">
+                                  <field name="VAR" id=";ZkZ{TRtA4hmWkq!CBtO">objeto</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="whenHovered" id="20iMzay[1el(~9agONNp" inline="false">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false"></mutation>
+                                  <field name="X_RAY">FALSE</field>
+                                  <value name="VALUE">
+                                    <shadow type="objectList" id="zVnb%_g??Safa/ZfSxh`">
+                                      <field name="FIELDNAME">&lt;none&gt;</field>
+                                    </shadow>
+                                    <block type="variables_get" id="k(MVa;iyrYc)u1=xZa:%">
+                                      <field name="VAR" id=";ZkZ{TRtA4hmWkq!CBtO">objeto</field>
+                                    </block>
+                                  </value>
+                                  <statement name="DO_OVER">
+                                    <block type="controls_if" id="U,-ikH-^[gk^FQ0R~lik">
+                                      <value name="IF0">
+                                        <block type="logic_compare" id="x$1F0Rc`WsNc[6`w9dN{">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get" id="us@|R1{L)fbC?b`WS9@Y">
+                                              <field name="VAR" id=";ip9Dw?b/u|Eq=Zz64w:">proceso</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="variables_get" id="*emh-x++ej6vByz4^]fl">
+                                              <field name="VAR" id="yki,}4M@uJvvwM1uROhK">paso</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="setHTMLElemStyle" id="Jf+sFRw8Jh-T;!C2Hnmz">
+                                          <field name="PROPERTY">cursor</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <value name="VALUE">
+                                            <shadow type="cursorDropdown" id="20/xAFSDyKAz5BTjI?f8">
+                                              <field name="TEXT">pointer</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="ID">
+                                            <shadow type="text" id="/:/Ig#ej4!@iSS$AV5$P">
+                                              <field name="TEXT">body_admision</field>
+                                            </shadow>
+                                            <block type="DOMObjectSelector" id="eI|Y|9;Xul^x,h1E@.)8">
+                                              <field name="DOM_OBJECT">BODY</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </statement>
+                                  <statement name="DO_OUT">
+                                    <block type="controls_if" id=",7F=KCjqs,+m}}J,9NAr">
+                                      <value name="IF0">
+                                        <block type="logic_compare" id="FJ:mG^H)j#jEhI3EM#,d">
+                                          <field name="OP">EQ</field>
+                                          <value name="A">
+                                            <block type="variables_get" id="s=9OmR%8CFbAVZ|$Xp]l">
+                                              <field name="VAR" id=";ip9Dw?b/u|Eq=Zz64w:">proceso</field>
+                                            </block>
+                                          </value>
+                                          <value name="B">
+                                            <block type="variables_get" id="3,RbYn3kX[,*OWQ]uhQZ">
+                                              <field name="VAR" id="yki,}4M@uJvvwM1uROhK">paso</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                      <statement name="DO0">
+                                        <block type="setHTMLElemStyle" id="44R^{;BEiRKDDDC]7`2B">
+                                          <field name="PROPERTY">cursor</field>
+                                          <field name="PARENT">FALSE</field>
+                                          <value name="VALUE">
+                                            <shadow type="cursorDropdown" id="0(?;3bKQ/H`vu)wqMCcm">
+                                              <field name="TEXT">grab</field>
+                                            </shadow>
+                                          </value>
+                                          <value name="ID">
+                                            <shadow type="text" id="/:/Ig#ej4!@iSS$AV5$P">
+                                              <field name="TEXT">body_admision</field>
+                                            </shadow>
+                                            <block type="DOMObjectSelector" id="jpN1a;;N*Rd/q/vwMKg6">
+                                              <field name="DOM_OBJECT">BODY</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="whenClicked" id="+M,BPa6?5*F|6LoKIG4+" inline="false">
+                                      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+                                      <field name="X_RAY">FALSE</field>
+                                      <field name="DOUBLE_CLICK">FALSE</field>
+                                      <field name="LEFT_BUTTON">TRUE</field>
+                                      <field name="MIDDLE_BUTTON">TRUE</field>
+                                      <field name="RIGHT_BUTTON">TRUE</field>
+                                      <value name="VALUE">
+                                        <shadow type="objectList" id="v7!mg[^(nwj25jC/Wzjh">
+                                          <field name="FIELDNAME">&lt;none&gt;</field>
+                                        </shadow>
+                                        <block type="variables_get" id="bT3z!A_Q@P2V.0t0@GK)">
+                                          <field name="VAR" id=";ZkZ{TRtA4hmWkq!CBtO">objeto</field>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="controls_if" id="3?.n8wM80/.xKgEC]]tT">
+                                          <value name="IF0">
+                                            <block type="logic_compare" id="C$?okJWZ$s;]cpMn?5:1">
+                                              <field name="OP">EQ</field>
+                                              <value name="A">
+                                                <block type="variables_get" id="#i_,j._v|hQ7s`Mai_ss">
+                                                  <field name="VAR" id=";ip9Dw?b/u|Eq=Zz64w:">proceso</field>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get" id="t}rYqcz-YkdHld$v.I%s">
+                                                  <field name="VAR" id="yki,}4M@uJvvwM1uROhK">paso</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <statement name="DO0">
+                                            <block type="setHTMLElemStyle" id="]A|P*{KZLCV[8vN6aTU1">
+                                              <field name="PROPERTY">display</field>
+                                              <field name="PARENT">TRUE</field>
+                                              <value name="VALUE">
+                                                <shadow type="displayDropdown" id="dCU]q}72Cmv0[Bs?jgA|">
+                                                  <field name="TEXT">flex</field>
+                                                </shadow>
+                                              </value>
+                                              <value name="ID">
+                                                <shadow type="text" id="l;t;mmo*w~IKEzQJiCYD">
+                                                  <field name="TEXT">contenedorModalInformacion</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="setTimeout" id="lQJb}H:LDO(7wylb[4|H">
+                                                  <value name="VALUE">
+                                                    <shadow type="math_number" id="|`S_BG;^z.s+YDH=bDvl">
+                                                      <field name="NUM">0.5</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <statement name="DO">
+                                                    <block type="setHTMLElemStyle" id="QS!GPOqSSDveQE`y!J?)">
+                                                      <field name="PROPERTY">opacity</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="VALUE">
+                                                        <shadow type="text" id="/BuJG,TmnM4.?1fw:i/X">
+                                                          <field name="TEXT">1</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <value name="ID">
+                                                        <shadow type="text" id="^=#lk025qOzY^0BC_Jgy">
+                                                          <field name="TEXT">contenedorModalInformacion</field>
+                                                        </shadow>
+                                                      </value>
+                                                    </block>
+                                                  </statement>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                        </block>
+                                      </statement>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <tab name="list" type="CommonTab" active="false" scrollx="172.03070324430712" scrolly="348.93284661258303" scale="0.7037802038446168">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="3|VUJ=%}LLwmY;R+I!V4">sag_mill_feed_obj</variable>
+      <variable id="BOd+8nltgDQ%pS!8}+X}">sag_mill_feed_conveyor_obj</variable>
+      <variable id="8SS{G~K{KS!AZ@q47exY">molinoSAG_obj</variable>
+      <variable id="utUHicX1%unYG5-LIt^t">pebble_crusher_obj</variable>
+      <variable id="D3W..IP3)@N%)PK%u|9F">saranda_obj</variable>
+      <variable id="QqZAHa}[A83do;2E,xF*">bombas_obj</variable>
+      <variable id="9.^AKklM,1zC0!K@$Y%j">bombas_ciclon_obj</variable>
+      <variable id="C1W.2$`EcTnf_+=`;U`{">debajo_bomba_ciclon_obj</variable>
+      <variable id="tr7uoZ7KT#?UhdPE`QFT">depositos_obj</variable>
+      <variable id=".|~O5(k^+h@S^8hGAmq0">bombas02_obj</variable>
+      <variable id="1bZh56G$q@=:iP=VQFlp">faja_obj</variable>
+      <variable id="372^]5W]/NpLq+]SU65A">faja02_obj</variable>
+      <variable id="?2_1q1s_|/vS~5bbi]Ls">equipo01_obj</variable>
+      <variable id="xU{lU8ZtbbpC_Rde!7WG">faja03_obj</variable>
+      <variable id="S=rEEe+buJuuzCKfPsFg">faja04_obj</variable>
+      <variable id="Y-Q09=N.343mb3aY]JgJ">equipo02_obj</variable>
+      <variable id="~|S;GdB9yV(nLv:J;jy7">depositos02_obj</variable>
+      <variable id="rF$M`A#:tFtBwxwv~lau">bombas_03_obj</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="8b?%qTAm+o-/k~?]T8,!" x="490" y="-210">
+      <field name="VAR" id="3|VUJ=%}LLwmY;R+I!V4">sag_mill_feed_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="qe,9Sm?]!^t=9~;:`y6I">
+          <field name="FIELDNAME">equipo_200_CV_0102</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="?A}l#jzP5J843V;jv0Zs" x="490" y="-150">
+      <field name="VAR" id="BOd+8nltgDQ%pS!8}+X}">sag_mill_feed_conveyor_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="rhh?P^Hs6`g1S?t{V..d">
+          <field name="FIELDNAME">equipo_200_CV_0108</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="hide" id="u}~/JqnVIvNANxXY{jVW" x="-50" y="-90">
+      <value name="VALUE">
+        <shadow type="objectList" id="K]Q8@Bgf5p/b$Pp0%Db+">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="lists_create_with" id="u#gYK8GR~8PI`8]kf={[">
+          <mutation items="26"></mutation>
+          <value name="ADD0">
+            <block type="objectList" id="x#?(g{#Whn$Hf5U#O9~_">
+              <field name="FIELDNAME">informacionB01_mesh</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="objectList" id="NJbD8Q?v}/*]A*F*eP-u">
+              <field name="FIELDNAME">informacionB02_mesh</field>
+            </block>
+          </value>
+          <value name="ADD2">
+            <block type="objectList" id="dBmXWdIHZ,/%-Sp^J]AE">
+              <field name="FIELDNAME">informacionB03_mesh</field>
+            </block>
+          </value>
+          <value name="ADD3">
+            <block type="objectList" id="+ic$Z]Y0,L.G(6x^:g^I">
+              <field name="FIELDNAME">informacionB04_mesh</field>
+            </block>
+          </value>
+          <value name="ADD4">
+            <block type="objectList" id="E:)bLD#=*!D_5qa~O{F5">
+              <field name="FIELDNAME">informacionB05_mesh</field>
+            </block>
+          </value>
+          <value name="ADD5">
+            <block type="objectList" id="|}Q:8K]dCH,Uus$xOQE|">
+              <field name="FIELDNAME">informacionB06_mesh</field>
+            </block>
+          </value>
+          <value name="ADD6">
+            <block type="objectList" id="QiqO`oHU~tRsBi5o^wkP">
+              <field name="FIELDNAME">informacionB07_mesh</field>
+            </block>
+          </value>
+          <value name="ADD7">
+            <block type="objectList" id=":.bzC/5j`qkzhv|e-trl">
+              <field name="FIELDNAME">informacionB08_mesh</field>
+            </block>
+          </value>
+          <value name="ADD8">
+            <block type="objectList" id="-DZ:.FoQdi]{xR!=:U~*">
+              <field name="FIELDNAME">informacionB09_mesh</field>
+            </block>
+          </value>
+          <value name="ADD9">
+            <block type="objectList" id="$;V,fJ0E@OX,||/Uxjf,">
+              <field name="FIELDNAME">informacionB10_mesh</field>
+            </block>
+          </value>
+          <value name="ADD10">
+            <block type="objectList" id="333T3iab3wX98A)}@Blr">
+              <field name="FIELDNAME">informacionB11_mesh</field>
+            </block>
+          </value>
+          <value name="ADD11">
+            <block type="objectList" id="ENj@s!ao?Py;zn27lOQm">
+              <field name="FIELDNAME">informacionB12_mesh</field>
+            </block>
+          </value>
+          <value name="ADD12">
+            <block type="objectList" id=")E(oU};BzXRz0(SY1H$M">
+              <field name="FIELDNAME">informacionB13_mesh</field>
+            </block>
+          </value>
+          <value name="ADD13">
+            <block type="objectList" id="O2!MUYj-Fdo:xRxVQ2iM">
+              <field name="FIELDNAME">informacionA01_mesh</field>
+            </block>
+          </value>
+          <value name="ADD14">
+            <block type="objectList" id="3s`[-oa|iYWR9H/9.8i-">
+              <field name="FIELDNAME">informacionA02_mesh</field>
+            </block>
+          </value>
+          <value name="ADD15">
+            <block type="objectList" id="s,`aTcjhx1%:LXL?OK+1">
+              <field name="FIELDNAME">informacionA03_mesh</field>
+            </block>
+          </value>
+          <value name="ADD16">
+            <block type="objectList" id="@e!jk:C%Y?tE6_{_`kr?">
+              <field name="FIELDNAME">informacionA04_mesh</field>
+            </block>
+          </value>
+          <value name="ADD17">
+            <block type="objectList" id="^H}2_:#6eA+yXIa)3DSF">
+              <field name="FIELDNAME">informacionA05_mesh</field>
+            </block>
+          </value>
+          <value name="ADD18">
+            <block type="objectList" id="rz`th@-PFhc0T`8f`Fl.">
+              <field name="FIELDNAME">informacionA06_mesh</field>
+            </block>
+          </value>
+          <value name="ADD19">
+            <block type="objectList" id="NCj#cBVLb4dSh8iFcSjM">
+              <field name="FIELDNAME">informacionA07_mesh</field>
+            </block>
+          </value>
+          <value name="ADD20">
+            <block type="objectList" id="3Co:p%dGs[`v]26,2clm">
+              <field name="FIELDNAME">informacionA08_mesh</field>
+            </block>
+          </value>
+          <value name="ADD21">
+            <block type="objectList" id="SsHNcTrU{g1UtmLg.ZN2">
+              <field name="FIELDNAME">informacionA09_mesh</field>
+            </block>
+          </value>
+          <value name="ADD22">
+            <block type="objectList" id="3*QemGs$+c@fIJH0xY)B">
+              <field name="FIELDNAME">informacionA10_mesh</field>
+            </block>
+          </value>
+          <value name="ADD23">
+            <block type="objectList" id="}FD=R}ycgDU]?I7Yw_+|">
+              <field name="FIELDNAME">informacionA11_mesh</field>
+            </block>
+          </value>
+          <value name="ADD24">
+            <block type="objectList" id="f?Wu#eZ~(N;|NMXC.0X8">
+              <field name="FIELDNAME">informacionA12_mesh</field>
+            </block>
+          </value>
+          <value name="ADD25">
+            <block type="objectList" id="PN,ehw`sOmGl=`7[3_G0">
+              <field name="FIELDNAME">informacionA13_mesh</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="WEhnxU(#zEs$x^:@6OeK" x="490" y="-90">
+      <field name="VAR" id="8SS{G~K{KS!AZ@q47exY">molinoSAG_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="1e*kAll}G``lyPR#krsr">
+          <field name="FIELDNAME">equipo_200_ML_0120</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="6y*u#^.gIK3a*WzPd1}@" x="490" y="-30">
+      <field name="VAR" id="utUHicX1%unYG5-LIt^t">pebble_crusher_obj</field>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="xXyzqVfjps2T4k*(GC`e" x="490" y="50">
+      <field name="VAR" id="D3W..IP3)@N%)PK%u|9F">saranda_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="LAD4!es.VZ/jTwG3[One">
+          <field name="FIELDNAME">equipo_200_SR_0124</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="dT}]txWQz]1h$8LP;5C3" x="490" y="110">
+      <field name="VAR" id="QqZAHa}[A83do;2E,xF*">bombas_obj</field>
+      <value name="VALUE">
+        <block type="lists_create_with" id="s!FBO2,D5pG4?)ybclW1">
+          <mutation items="2"></mutation>
+          <value name="ADD0">
+            <block type="objectList" id="=c#j!^V`6lyhgKUI*.rV">
+              <field name="FIELDNAME">equipo_200_PP_0142</field>
+            </block>
+          </value>
+          <value name="ADD1">
+            <block type="objectList" id="Ee=xp4Q^r*c.I!!]H~+=">
+              <field name="FIELDNAME">equipo_200_PP_0144</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="X=8s7+%18M.}N{y--|xn" x="490" y="210">
+      <field name="VAR" id="9.^AKklM,1zC0!K@$Y%j">bombas_ciclon_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="uoWNBy(6)_^Q%;Ab{dNY">
+          <field name="FIELDNAME">equipo_200_CL_0150</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="UQ[:1?sMP)k!,DNa[h,C" x="490" y="290">
+      <field name="VAR" id="C1W.2$`EcTnf_+=`;U`{">debajo_bomba_ciclon_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="m-a9sW)HVdHzARs/|VyU">
+          <field name="FIELDNAME">equipo_400_SA_0230</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="dq/Dp/,MySZ])y1zN/xr" x="490" y="350">
+      <field name="VAR" id="tr7uoZ7KT#?UhdPE`QFT">depositos_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="MROw3]0RjF0{ucCz~C|1">
+          <field name="FIELDNAME">equipo_200_TK_0152</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="QL=vncPfqq+MRxjMhS|.">
+          <field name="VAR" id="~|S;GdB9yV(nLv:J;jy7">depositos02_obj</field>
+          <value name="VALUE">
+            <block type="objectList" id="?4Ueexu25@qqh0(!KW6N">
+              <field name="FIELDNAME">equipo_200_TK_0171</field>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="gH8wIaf].,vr@P!4)Z*?" x="490" y="450">
+      <field name="VAR" id=".|~O5(k^+h@S^8hGAmq0">bombas02_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="e?SiPQL{R;)C?USjgDR2">
+          <field name="FIELDNAME">equipo_200_PP_0158</field>
+        </block>
+      </value>
+      <next>
+        <block type="variables_set" id="bB]u4RA8;xNjuK4*LF}]">
+          <field name="VAR" id="rF$M`A#:tFtBwxwv~lau">bombas_03_obj</field>
+          <value name="VALUE">
+            <block type="objectList" id="Z6upu]A*;p|1sF}10]H*">
+              <field name="FIELDNAME">equipo_200_PP_0156</field>
+            </block>
+          </value>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="|aSy{wl?xwf(l.CM^i##" x="510" y="530">
+      <field name="VAR" id="1bZh56G$q@=:iP=VQFlp">faja_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="#R74J?XCSt~?YOLL~qKg">
+          <field name="FIELDNAME">equipo_200_CV_0125</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="%.NRff,TJb-uqzMmLXi3" x="510" y="590">
+      <field name="VAR" id="372^]5W]/NpLq+]SU65A">faja02_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="{JTSUh3_r;rJkLLK$)Y1">
+          <field name="FIELDNAME">equipo_200_CV_0127</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="ZAb4TW-sg_Or5O%MZypb" x="510" y="650">
+      <field name="VAR" id="?2_1q1s_|/vS~5bbi]Ls">equipo01_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="NQWiLa5XQ~.MaEolD6CG">
+          <field name="FIELDNAME">equipo_200_CR_0130</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="g.S{+N0)6As-Ef0JgUFm" x="510" y="710">
+      <field name="VAR" id="xU{lU8ZtbbpC_Rde!7WG">faja03_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="E^RHy|J*AP,v)6,HqDrI">
+          <field name="FIELDNAME">equipo_200_CV_0108</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="RhRUey|7US0Eq},8I_PL" x="510" y="770">
+      <field name="VAR" id="S=rEEe+buJuuzCKfPsFg">faja04_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="ZrpM1rGE2bNA%*b*+k(l">
+          <field name="FIELDNAME">equipo_200_CV_0102</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="tHf+~U8b-)20Lc7u?;oz" x="510" y="830">
+      <field name="VAR" id="Y-Q09=N.343mb3aY]JgJ">equipo02_obj</field>
+      <value name="VALUE">
+        <block type="objectList" id="(wCMbEU4$V%?7QPc{v-@">
+          <field name="FIELDNAME">equipo_200_PP_0175</field>
+        </block>
+      </value>
+    </block>
+  </tab>
+  <tab name="pasos" type="CommonTab" active="true" scrollx="-93.57476599559959" scrolly="239.79291951461346" scale="0.6809284487418275">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id=";ip9Dw?b/u|Eq=Zz64w:">proceso</variable>
+      <variable id="yki,}4M@uJvvwM1uROhK">paso</variable>
+      <variable id="+n_]29w3AxU#lEwervR{">img</variable>
+      <variable id="wo,h0=9*+3^I|]?pJB}=">camara</variable>
+      <variable id="(bpDONAln=CXuKeit:5S">camara_direccion</variable>
+      <variable id=";ZkZ{TRtA4hmWkq!CBtO">objeto</variable>
+      <variable id="tr7uoZ7KT#?UhdPE`QFT">depositos_obj</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="QR{Y[*9jG*5oC:JBK?-x" x="370" y="-110">
+      <field name="VAR" id=";ip9Dw?b/u|Eq=Zz64w:">proceso</field>
+      <value name="VALUE">
+        <block type="text" id="bsv_]pqNU+1K!2*sTFZh">
+          <field name="TEXT">paso1</field>
+        </block>
+      </value>
+      <next>
+        <block type="execScript" id="h^8lV,9m9E0{pNteU,[S">
+          <value name="TEXT">
+            <shadow type="textMultiline" id="19c~Wy!cyqwH|9gjE`s7">
+              <field name="HIGHLIGHT_MODE">javascript</field>
+              <field name="TEXT" editor-height="19" editor-width="668.3268913005777">app.controls.addEventListener("change", function () {&amp;#10;    var raycaster = new v3d.Raycaster();&amp;#10;    var downVector = new v3d.Vector3(0, -1, 0);&amp;#10;&amp;#10;    var terreno = app.scene.getObjectByName("terreno_mesh");&amp;#10;    if (!terreno) {&amp;#10;        console.error("El objeto 'terreno_mesh' no se encuentra en la escena.");&amp;#10;        return;&amp;#10;    }&amp;#10;&amp;#10;    // Disparar el raycast desde la posición de la cámara&amp;#10;    raycaster.set(app.camera.position, downVector);&amp;#10;&amp;#10;    var intersects = raycaster.intersectObject(terreno, true);&amp;#10;&amp;#10;    if (intersects.length &gt; 0) {&amp;#10;        var groundY = intersects[0].point.y + 3.5; // Altura mínima permitida&amp;#10;&amp;#10;        if (app.camera.position.y &lt; groundY) {&amp;#10;            console.log("Corrigiendo altura de la cámara a:", groundY);&amp;#10;            &amp;#10;            // Forzar la posición de la cámara en el siguiente frame&amp;#10;            setTimeout(() =&gt; {&amp;#10;                app.camera.position.y = groundY;&amp;#10;            }, 0);&amp;#10;        }&amp;#10;    }&amp;#10;});&amp;#10;</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="eventHTMLElem" id="{D%CAo*Zx~UhlWF}=:5^">
+              <field name="EVENT">click</field>
+              <field name="PARENT">TRUE</field>
+              <value name="ID">
+                <shadow type="text" id="5Vbzp=jiYj8ei$z|xaWd">
+                  <field name="TEXT">paso1</field>
+                </shadow>
+              </value>
+              <statement name="DO">
+                <block type="variables_set" id="z;gZ!A0@h!3Y@TYkdCVs">
+                  <field name="VAR" id=";ip9Dw?b/u|Eq=Zz64w:">proceso</field>
+                  <value name="VALUE">
+                    <block type="text" id="tnDwk]d1pUMpEEM*O@1#">
+                      <field name="TEXT">paso1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="procedures_callnoreturn" id="o=A#fzfl;[$.^~,i(Y9b">
+                      <mutation name="reiniciar_pasos"></mutation>
+                      <next>
+                        <block type="outline" id="*-`5)])n9tNKhsaO3}8(">
+                          <field name="DO_WHAT">DISABLE</field>
+                          <value name="TARGET">
+                            <shadow type="objectList" id=".s4Z=D{a~o;|[8AJ{YBQ">
+                              <field name="FIELDNAME">letreroE_mesh</field>
+                            </shadow>
+                            <block type="allObjectList" id="9EQI}Y1ht,pf_Tb=.sG?"></block>
+                          </value>
+                          <next>
+                            <block type="setHTMLElemStyle" id="p0|;bu^}cTu;Qe_XT`vj">
+                              <field name="PROPERTY">backgroundColor</field>
+                              <field name="PARENT">TRUE</field>
+                              <value name="VALUE">
+                                <shadow type="text" id="?2.reQ%YDx^.S1WZ~/2f">
+                                  <field name="TEXT">rgba(8, 167, 255, 0.8)</field>
+                                </shadow>
+                              </value>
+                              <value name="ID">
+                                <shadow type="text" id="+I0W5]S?h=U9!;g/[r)7">
+                                  <field name="TEXT">paso1</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="tweenCameraExt" id="mo3xb*N}otFVMryKLh/0">
+                                  <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+                                  <field name="MOVEMENT_TYPE">LINEAR</field>
+                                  <value name="POSITION">
+                                    <block type="objectList" id="Jk(oKqI}tqK0TST(^AV2">
+                                      <field name="FIELDNAME">molienda_Pos14</field>
+                                    </block>
+                                  </value>
+                                  <value name="LOOKAT">
+                                    <block type="objectList" id="Gq1d|bg]UgY|Rs/.JS^V">
+                                      <field name="FIELDNAME">molienda_Dir14</field>
+                                    </block>
+                                  </value>
+                                  <value name="DURATION">
+                                    <shadow type="math_number" id="Pe(x(8Mc;o7l--)|EnyA">
+                                      <field name="NUM">1</field>
+                                    </shadow>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="eventHTMLElem" id="HE)iwib9(`V4Iac:-+QU">
+                  <field name="EVENT">click</field>
+                  <field name="PARENT">TRUE</field>
+                  <value name="ID">
+                    <shadow type="text" id="Nneb$FaYx.0pO-YSipi^">
+                      <field name="TEXT">paso2</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="execScript" id="dR?81{N[)j~FC#V%ECRe" disabled="true">
+                      <value name="TEXT">
+                        <shadow type="textMultiline" id="M#wQ-JF}-WN]WOS:?$}`">
+                          <field name="HIGHLIGHT_MODE">javascript</field>
+                          <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:19 },'*');</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="procedures_callnoreturn" id="mbB=6xEo4ByVDiYZdB3F" disabled="true">
+                          <mutation name="pasos">
+                            <arg name="paso"></arg>
+                            <arg name="img"></arg>
+                            <arg name="camara"></arg>
+                            <arg name="camara_direccion"></arg>
+                            <arg name="objeto"></arg>
+                          </mutation>
+                          <value name="ARG0">
+                            <block type="text" id="b5`Ou9+Ez(=@7EzupYF(">
+                              <field name="TEXT">paso2</field>
+                            </block>
+                          </value>
+                          <value name="ARG1">
+                            <block type="text" id="pwmZhe_8S_Rl+cOSf*i~">
+                              <field name="TEXT">/images/01-1.png</field>
+                            </block>
+                          </value>
+                          <value name="ARG2">
+                            <block type="objectList" id="1UwJEdY1=x`h@6,$D%4^">
+                              <field name="FIELDNAME">molienda_Pos13</field>
+                            </block>
+                          </value>
+                          <value name="ARG3">
+                            <block type="objectList" id="#du-$Gsm5[fp9fLb(4xL">
+                              <field name="FIELDNAME">molienda_Dir13</field>
+                            </block>
+                          </value>
+                          <value name="ARG4">
+                            <block type="objectList" id="yLW7zb;@I^9d^{V^z_+D">
+                              <field name="FIELDNAME">equipo_200_CV_0102</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="eventHTMLElem" id="sc/?/_=Bmz?|GE(X:S8k">
+                      <field name="EVENT">click</field>
+                      <field name="PARENT">TRUE</field>
+                      <value name="ID">
+                        <shadow type="text" id="Zv.H_=6s1#IV;Vj+d~W^">
+                          <field name="TEXT">paso3</field>
+                        </shadow>
+                      </value>
+                      <statement name="DO">
+                        <block type="execScript" id=";`Jl=f49.WU/wCC^}^U,">
+                          <value name="TEXT">
+                            <shadow type="textMultiline" id="q3z^+xvFB+a(6!wk.XZq">
+                              <field name="HIGHLIGHT_MODE">javascript</field>
+                              <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:19 },'*');</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="procedures_callnoreturn" id="_MK#+.!t.~pgqe0:+3`S" disabled="true">
+                              <mutation name="pasos">
+                                <arg name="paso"></arg>
+                                <arg name="img"></arg>
+                                <arg name="camara"></arg>
+                                <arg name="camara_direccion"></arg>
+                                <arg name="objeto"></arg>
+                              </mutation>
+                              <value name="ARG0">
+                                <block type="text" id="LO~FFhj[eST$3)pYXS,^">
+                                  <field name="TEXT">paso3</field>
+                                </block>
+                              </value>
+                              <value name="ARG1">
+                                <block type="text" id="$t31E!Uw`*qjXbh.Rf_z">
+                                  <field name="TEXT">/images/01-2.png</field>
+                                </block>
+                              </value>
+                              <value name="ARG2">
+                                <block type="objectList" id="OJK?B*d4eh^PXIq!=ql5">
+                                  <field name="FIELDNAME">molienda_Pos12</field>
+                                </block>
+                              </value>
+                              <value name="ARG3">
+                                <block type="objectList" id="VZvAH5tF7{xl/`%A^Xz3">
+                                  <field name="FIELDNAME">molienda_Dir12</field>
+                                </block>
+                              </value>
+                              <value name="ARG4">
+                                <block type="objectList" id="`yk_j!w+OE9r8cPF)HB-">
+                                  <field name="FIELDNAME">equipo_200_CV_0108</field>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="eventHTMLElem" id="FYULWE]+[90p9ekazaSf">
+                          <field name="EVENT">click</field>
+                          <field name="PARENT">TRUE</field>
+                          <value name="ID">
+                            <shadow type="text" id="|_oJf7a[qZ,f6ZsZ;?|{">
+                              <field name="TEXT">paso4</field>
+                            </shadow>
+                          </value>
+                          <statement name="DO">
+                            <block type="execScript" id="cdQaF^qZK+BCr;nC[ssC">
+                              <value name="TEXT">
+                                <shadow type="textMultiline" id=":K`U!inXc/^s_t%gg*f)">
+                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                  <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:20 },'*');</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="procedures_callnoreturn" id="V?seJPKt81?CF]iK4xm|" disabled="true">
+                                  <mutation name="pasos">
+                                    <arg name="paso"></arg>
+                                    <arg name="img"></arg>
+                                    <arg name="camara"></arg>
+                                    <arg name="camara_direccion"></arg>
+                                    <arg name="objeto"></arg>
+                                  </mutation>
+                                  <value name="ARG0">
+                                    <block type="text" id="A;s/XC%BOv=qfIh{FCT,">
+                                      <field name="TEXT">paso4</field>
+                                    </block>
+                                  </value>
+                                  <value name="ARG1">
+                                    <block type="text" id="|X@~M4M9m[L~vk4.+]1)">
+                                      <field name="TEXT">/images/02-1.png</field>
+                                    </block>
+                                  </value>
+                                  <value name="ARG2">
+                                    <block type="objectList" id="d5FF=?V27$-}%z%ryjc^">
+                                      <field name="FIELDNAME">molienda_Pos01</field>
+                                    </block>
+                                  </value>
+                                  <value name="ARG3">
+                                    <block type="objectList" id="%OAtr=!_V@(V6{:kSIcB">
+                                      <field name="FIELDNAME">molienda_Dir01</field>
+                                    </block>
+                                  </value>
+                                  <value name="ARG4">
+                                    <block type="objectList" id="0h8@y+kVzRZWE-7]@BAv">
+                                      <field name="FIELDNAME">equipo_200_ML_0120</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="eventHTMLElem" id="c7(-B@JL4zr8Q|4#:9_y">
+                              <field name="EVENT">click</field>
+                              <field name="PARENT">TRUE</field>
+                              <value name="ID">
+                                <shadow type="text" id="{]TQHz~=6BkE5-TB|fxS">
+                                  <field name="TEXT">paso5</field>
+                                </shadow>
+                              </value>
+                              <statement name="DO">
+                                <block type="execScript" id="y3GpH4Py``iHU81l};xq">
+                                  <value name="TEXT">
+                                    <shadow type="textMultiline" id=":==Gr{{?V=w2MSr=~xUX">
+                                      <field name="HIGHLIGHT_MODE">javascript</field>
+                                      <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:21 },'*');</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="procedures_callnoreturn" id="Q=k)^9MAowSVnzd`F^Hb" disabled="true">
+                                      <mutation name="pasos">
+                                        <arg name="paso"></arg>
+                                        <arg name="img"></arg>
+                                        <arg name="camara"></arg>
+                                        <arg name="camara_direccion"></arg>
+                                        <arg name="objeto"></arg>
+                                      </mutation>
+                                      <value name="ARG0">
+                                        <block type="text" id="iH/tf*~f*t{d^+,b*Su-">
+                                          <field name="TEXT">paso5</field>
+                                        </block>
+                                      </value>
+                                      <value name="ARG1">
+                                        <block type="text" id="r]tFVb#_A[%#6ksKq4.@">
+                                          <field name="TEXT">/images/03-1.png</field>
+                                        </block>
+                                      </value>
+                                      <value name="ARG2">
+                                        <block type="objectList" id="4#]Ora=JDWzxG3|kk=@%">
+                                          <field name="FIELDNAME">molienda_Pos02</field>
+                                        </block>
+                                      </value>
+                                      <value name="ARG3">
+                                        <block type="objectList" id="(J^~Sn7Rx,)=a{At=!st">
+                                          <field name="FIELDNAME">molienda_Dir02</field>
+                                        </block>
+                                      </value>
+                                      <value name="ARG4">
+                                        <block type="objectList" id="2EHAZz^Eh3ox}iA4h^Vy">
+                                          <field name="FIELDNAME">equipo_200_SR_0124</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="eventHTMLElem" id="%Cx^R9!Cg6R`3XghdM3w">
+                                  <field name="EVENT">click</field>
+                                  <field name="PARENT">TRUE</field>
+                                  <value name="ID">
+                                    <shadow type="text" id="k)LvN0Rst]SrxbkRP2aD">
+                                      <field name="TEXT">paso6</field>
+                                    </shadow>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="execScript" id="VN.~|.$7:GgME!?=,_8;" disabled="true">
+                                      <value name="TEXT">
+                                        <shadow type="textMultiline" id="fCRym7,ye/*z5F6@#$8W">
+                                          <field name="HIGHLIGHT_MODE">javascript</field>
+                                          <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:21 },'*');http://localhosthttp://localhost:8668:8668</field>
+                                        </shadow>
+                                      </value>
+                                      <next>
+                                        <block type="procedures_callnoreturn" id="Y%itj{QJwDP^l!0{-Je?" disabled="true">
+                                          <mutation name="pasos">
+                                            <arg name="paso"></arg>
+                                            <arg name="img"></arg>
+                                            <arg name="camara"></arg>
+                                            <arg name="camara_direccion"></arg>
+                                            <arg name="objeto"></arg>
+                                          </mutation>
+                                          <value name="ARG0">
+                                            <block type="text" id="!y5*n6iH01POR;~r]f4J">
+                                              <field name="TEXT">paso6</field>
+                                            </block>
+                                          </value>
+                                          <value name="ARG1">
+                                            <block type="text" id="?#t$H[)@3JUXXEY^/E!e">
+                                              <field name="TEXT">/images/04-1.png</field>
+                                            </block>
+                                          </value>
+                                          <value name="ARG2">
+                                            <block type="objectList" id="5]?5%GDdPT~@oYT)#UsU">
+                                              <field name="FIELDNAME">molienda_Pos08</field>
+                                            </block>
+                                          </value>
+                                          <value name="ARG3">
+                                            <block type="objectList" id="dw!T;!5)r8+(Ah6Lu6ge">
+                                              <field name="FIELDNAME">molienda_Dir08</field>
+                                            </block>
+                                          </value>
+                                          <value name="ARG4">
+                                            <block type="objectList" id="D_XSsl=kHYbtPZ.Y+ALY">
+                                              <field name="FIELDNAME">equipo_200_CV_0125</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="eventHTMLElem" id="$oZ{p9$@f{hb,TO8$uR:">
+                                      <field name="EVENT">click</field>
+                                      <field name="PARENT">TRUE</field>
+                                      <value name="ID">
+                                        <shadow type="text" id="nH.DX$[A|$pZ~|V{W{O?">
+                                          <field name="TEXT">paso7</field>
+                                        </shadow>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="execScript" id="XN;Pd_+?nhm_p-l|a?YC">
+                                          <value name="TEXT">
+                                            <shadow type="textMultiline" id="^]S5vJiVJSO^vLtygnh_">
+                                              <field name="HIGHLIGHT_MODE">javascript</field>
+                                              <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:22 },'*');</field>
+                                            </shadow>
+                                          </value>
+                                          <next>
+                                            <block type="procedures_callnoreturn" id="GHwDN5mrx;OpQt3?@W7|" disabled="true">
+                                              <mutation name="pasos">
+                                                <arg name="paso"></arg>
+                                                <arg name="img"></arg>
+                                                <arg name="camara"></arg>
+                                                <arg name="camara_direccion"></arg>
+                                                <arg name="objeto"></arg>
+                                              </mutation>
+                                              <value name="ARG0">
+                                                <block type="text" id="dSG*Xz7mVP#|[K@M_*]i">
+                                                  <field name="TEXT">paso7</field>
+                                                </block>
+                                              </value>
+                                              <value name="ARG1">
+                                                <block type="text" id="KA7e6Ggta))}3YK0mhw2">
+                                                  <field name="TEXT">/images/04-2.png</field>
+                                                </block>
+                                              </value>
+                                              <value name="ARG2">
+                                                <block type="objectList" id="@vT1%A!D2F!3;k5yhiX=">
+                                                  <field name="FIELDNAME">molienda_Pos09</field>
+                                                </block>
+                                              </value>
+                                              <value name="ARG3">
+                                                <block type="objectList" id="]ky=iFrFCkMyJuZ~xg}N">
+                                                  <field name="FIELDNAME">molienda_Dir09</field>
+                                                </block>
+                                              </value>
+                                              <value name="ARG4">
+                                                <block type="objectList" id="1s-w/)UUV~E+o{DUTJLC">
+                                                  <field name="FIELDNAME">equipo_200_CV_0127</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="eventHTMLElem" id="2CFNH!$X.HxVSsUNizHd">
+                                          <field name="EVENT">click</field>
+                                          <field name="PARENT">TRUE</field>
+                                          <value name="ID">
+                                            <shadow type="text" id="ul!80Tn*oHeJw@54v[9(">
+                                              <field name="TEXT">paso8</field>
+                                            </shadow>
+                                          </value>
+                                          <statement name="DO">
+                                            <block type="execScript" id="xj0l(8mU)KfU@@l8dXwS">
+                                              <value name="TEXT">
+                                                <shadow type="textMultiline" id="7iIht=YLl~v.D3?J|G},">
+                                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                                  <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:23 },'*');</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="procedures_callnoreturn" id="{5iQ#c18X:@{*kmKX{*X" disabled="true">
+                                                  <mutation name="pasos">
+                                                    <arg name="paso"></arg>
+                                                    <arg name="img"></arg>
+                                                    <arg name="camara"></arg>
+                                                    <arg name="camara_direccion"></arg>
+                                                    <arg name="objeto"></arg>
+                                                  </mutation>
+                                                  <value name="ARG0">
+                                                    <block type="text" id="X?lV$RDo]|Eiiv)l*TWu">
+                                                      <field name="TEXT">paso8</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG1">
+                                                    <block type="text" id="qFD#jL!#t;he]Yk4/A?v">
+                                                      <field name="TEXT">/images/05.png</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG2">
+                                                    <block type="objectList" id="QMBo)k0k__]hD*sJ;77~">
+                                                      <field name="FIELDNAME">molienda_Pos11</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG3">
+                                                    <block type="objectList" id="OTeM%[flJdci4WLUGa!p">
+                                                      <field name="FIELDNAME">molienda_Dir11</field>
+                                                    </block>
+                                                  </value>
+                                                  <value name="ARG4">
+                                                    <block type="objectList" id="?h(gN$/GX#kg}E7/FX?o">
+                                                      <field name="FIELDNAME">equipo_200_CR_0130</field>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </statement>
+                                          <next>
+                                            <block type="eventHTMLElem" id="q[)M!%L[~#lY`fC_I8iK">
+                                              <field name="EVENT">click</field>
+                                              <field name="PARENT">TRUE</field>
+                                              <value name="ID">
+                                                <shadow type="text" id="ph,*z8O-7GD;u,#R_jwt">
+                                                  <field name="TEXT">paso9</field>
+                                                </shadow>
+                                              </value>
+                                              <statement name="DO">
+                                                <block type="execScript" id="u)z:RY!?jlw0x:q|ee:B">
+                                                  <value name="TEXT">
+                                                    <shadow type="textMultiline" id="a4|ra9asKg`8wUhSAVbe">
+                                                      <field name="HIGHLIGHT_MODE">javascript</field>
+                                                      <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMe    }&amp;#10;});ssage({param1: 1, param2:24 },'*');</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <next>
+                                                    <block type="procedures_callnoreturn" id="8PN?OCtXH:wE29=Jz,PF" disabled="true">
+                                                      <mutation name="pasos">
+                                                        <arg name="paso"></arg>
+                                                        <arg name="img"></arg>
+                                                        <arg name="camara"></arg>
+                                                        <arg name="camara_direccion"></arg>
+                                                        <arg name="objeto"></arg>
+                                                      </mutation>
+                                                      <value name="ARG0">
+                                                        <block type="text" id="|E_ux9u(v`[MLkJz_j,~">
+                                                          <field name="TEXT">paso9</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG1">
+                                                        <block type="text" id="W5Ag=P_%gaEW6?{?-j}:">
+                                                          <field name="TEXT">/images/06-1.png</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG2">
+                                                        <block type="objectList" id="a$~I/=cy30JJ1fz@CgfU">
+                                                          <field name="FIELDNAME">molienda_Pos05</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG3">
+                                                        <block type="objectList" id="];-K?wXj:rZZFBe97$]a">
+                                                          <field name="FIELDNAME">molienda_Dir05</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="ARG4">
+                                                        <block type="objectList" id="8Hv2$xz?nqd2$z1Ea!U4">
+                                                          <field name="FIELDNAME">equipo_200_PP_0175</field>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="eventHTMLElem" id="L@;mb}L~`~Ybnmo7XqEv">
+                                                  <field name="EVENT">click</field>
+                                                  <field name="PARENT">TRUE</field>
+                                                  <value name="ID">
+                                                    <shadow type="text" id=":7[z)E*6c@i:o]!Q?~v_">
+                                                      <field name="TEXT">paso10</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <statement name="DO">
+                                                    <block type="execScript" id="$c]*l9U~fWM@PJ!g/:r_">
+                                                      <value name="TEXT">
+                                                        <shadow type="textMultiline" id="]b#N5E6-5qeX2Xqve53O">
+                                                          <field name="HIGHLIGHT_MODE">javascript</field>
+                                                          <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:25 },'*');</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="procedures_callnoreturn" id="4Nr;6}[Dgjk$6oX}[$Ie" disabled="true">
+                                                          <mutation name="pasos">
+                                                            <arg name="paso"></arg>
+                                                            <arg name="img"></arg>
+                                                            <arg name="camara"></arg>
+                                                            <arg name="camara_direccion"></arg>
+                                                            <arg name="objeto"></arg>
+                                                          </mutation>
+                                                          <value name="ARG0">
+                                                            <block type="text" id="Zt{ka6:8WX6Y3-BVO~-e">
+                                                              <field name="TEXT">paso10</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG1">
+                                                            <block type="text" id="KnUf=o##XzwFwh-XNmOc">
+                                                              <field name="TEXT">/images/07-1.png</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG2">
+                                                            <block type="objectList" id="S.Yx_OERFTK)btf/$Nv;">
+                                                              <field name="FIELDNAME">molienda_Pos03</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG3">
+                                                            <block type="objectList" id=".4%r@nYkG*#u;x[tJ{Mm">
+                                                              <field name="FIELDNAME">molienda_Dir03</field>
+                                                            </block>
+                                                          </value>
+                                                          <value name="ARG4">
+                                                            <block type="objectList" id="QO*9Ts/.0kCGn/hI4Cy#">
+                                                              <field name="FIELDNAME">equipo_200_PP_0142</field>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </statement>
+                                                  <next>
+                                                    <block type="eventHTMLElem" id="jSBF[{I*`)-F*_Hnn;46">
+                                                      <field name="EVENT">click</field>
+                                                      <field name="PARENT">TRUE</field>
+                                                      <value name="ID">
+                                                        <shadow type="text" id=")-NWZAKPm8m,-_g!$al%">
+                                                          <field name="TEXT">paso11</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <statement name="DO">
+                                                        <block type="execScript" id="v@o=OtHGy44(4VEyb%cK">
+                                                          <value name="TEXT">
+                                                            <shadow type="textMultiline" id="omF*bVzx__;k-.Ce#rSP">
+                                                              <field name="HIGHLIGHT_MODE">javascript</field>
+                                                              <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:25 },'*');</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <next>
+                                                            <block type="procedures_callnoreturn" id="qGI/cO-]B8U!rHhcr|f?" disabled="true">
+                                                              <mutation name="pasos">
+                                                                <arg name="paso"></arg>
+                                                                <arg name="img"></arg>
+                                                                <arg name="camara"></arg>
+                                                                <arg name="camara_direccion"></arg>
+                                                                <arg name="objeto"></arg>
+                                                              </mutation>
+                                                              <value name="ARG0">
+                                                                <block type="text" id="[v%SwIVv80YAP}|45)ZW">
+                                                                  <field name="TEXT">paso11</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ARG1">
+                                                                <block type="text" id="6^X#xTEDwp?T|~hcUHg#">
+                                                                  <field name="TEXT">/images/07-1.png</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ARG2">
+                                                                <block type="objectList" id="3w2haT5_b/z21FCU2qa+">
+                                                                  <field name="FIELDNAME">molienda_Pos03</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ARG3">
+                                                                <block type="objectList" id="=$I2M[u9awORdBZZypXZ">
+                                                                  <field name="FIELDNAME">molienda_Dir03</field>
+                                                                </block>
+                                                              </value>
+                                                              <value name="ARG4">
+                                                                <block type="objectList" id="FfeD!Qk|o(o/FOj4s+[R">
+                                                                  <field name="FIELDNAME">equipo_200_PP_0144</field>
+                                                                </block>
+                                                              </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                      <next>
+                                                        <block type="eventHTMLElem" id="+$(XSzZla5!8iD`+Lb[m">
+                                                          <field name="EVENT">click</field>
+                                                          <field name="PARENT">TRUE</field>
+                                                          <value name="ID">
+                                                            <shadow type="text" id="IYG]HG{O(_NHYinzFlrZ">
+                                                              <field name="TEXT">paso12</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <statement name="DO">
+                                                            <block type="execScript" id="RTpX-UVGwBOw:yP)19U6">
+                                                              <value name="TEXT">
+                                                                <shadow type="textMultiline" id="3LnLM;{MKt0G,n@R=[NT">
+                                                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                  <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:26 },'*');</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <next>
+                                                                <block type="procedures_callnoreturn" id="pJ|*]9V)B=IIEX=r/[kU" disabled="true">
+                                                                  <mutation name="pasos">
+                                                                    <arg name="paso"></arg>
+                                                                    <arg name="img"></arg>
+                                                                    <arg name="camara"></arg>
+                                                                    <arg name="camara_direccion"></arg>
+                                                                    <arg name="objeto"></arg>
+                                                                  </mutation>
+                                                                  <value name="ARG0">
+                                                                    <block type="text" id="JM-2rVn%N;L+Q^7bh]DR">
+                                                                      <field name="TEXT">paso12</field>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="ARG1">
+                                                                    <block type="text" id="/jNuaTD*Yx0TA6+N(l5!">
+                                                                      <field name="TEXT">/images/08-1.png</field>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="ARG2">
+                                                                    <block type="objectList" id="gdMi|zUnX(Dz9CXNh:n1">
+                                                                      <field name="FIELDNAME">molienda_Pos04</field>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="ARG3">
+                                                                    <block type="objectList" id="lt9uy).ys$EbgcXYy3Fd">
+                                                                      <field name="FIELDNAME">molienda_Dir04</field>
+                                                                    </block>
+                                                                  </value>
+                                                                  <value name="ARG4">
+                                                                    <block type="objectList" id="MbkI:At1L4]+X?z.]4.q">
+                                                                      <field name="FIELDNAME">equipo_200_CL_0150</field>
+                                                                    </block>
+                                                                  </value>
+                                                                </block>
+                                                              </next>
+                                                            </block>
+                                                          </statement>
+                                                          <next>
+                                                            <block type="eventHTMLElem" id="N29lql6H-JMcC1Fpw)%B">
+                                                              <field name="EVENT">click</field>
+                                                              <field name="PARENT">TRUE</field>
+                                                              <value name="ID">
+                                                                <shadow type="text" id="yGmHtKd_jkIR9pc1aYMc">
+                                                                  <field name="TEXT">paso13</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <statement name="DO">
+                                                                <block type="execScript" id="Eu~]o3hucnra_E#H-/f3">
+                                                                  <value name="TEXT">
+                                                                    <shadow type="textMultiline" id="}4e#mKl[y!z|;3%s$^kl">
+                                                                      <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                      <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:26 },'*');</field>
+                                                                    </shadow>
+                                                                  </value>
+                                                                  <next>
+                                                                    <block type="procedures_callnoreturn" id="}@Qw,ts4N;JZzOb#m7p2" disabled="true">
+                                                                      <mutation name="pasos">
+                                                                        <arg name="paso"></arg>
+                                                                        <arg name="img"></arg>
+                                                                        <arg name="camara"></arg>
+                                                                        <arg name="camara_direccion"></arg>
+                                                                        <arg name="objeto"></arg>
+                                                                      </mutation>
+                                                                      <value name="ARG0">
+                                                                        <block type="text" id="9a:mz#s?.Ws#=*$8Eq=@">
+                                                                          <field name="TEXT">paso13</field>
+                                                                        </block>
+                                                                      </value>
+                                                                      <value name="ARG1">
+                                                                        <block type="text" id="t.Q#6N,rH$fTbj.p4Xe5">
+                                                                          <field name="TEXT">/images/09-1.png</field>
+                                                                        </block>
+                                                                      </value>
+                                                                      <value name="ARG2">
+                                                                        <block type="objectList" id="D{Pr+r#ZV$^EAd?]GWVq">
+                                                                          <field name="FIELDNAME">molienda_Pos10</field>
+                                                                        </block>
+                                                                      </value>
+                                                                      <value name="ARG3">
+                                                                        <block type="objectList" id="a_J2)zkx,=+c=,NrS5uC">
+                                                                          <field name="FIELDNAME">molienda_Dir10</field>
+                                                                        </block>
+                                                                      </value>
+                                                                      <value name="ARG4">
+                                                                        <block type="objectList" id="W{eX,Giiq11F(^;-nI#+">
+                                                                          <field name="FIELDNAME">equipo_400_SA_0230</field>
+                                                                        </block>
+                                                                      </value>
+                                                                    </block>
+                                                                  </next>
+                                                                </block>
+                                                              </statement>
+                                                              <next>
+                                                                <block type="eventHTMLElem" id="u;eER#[jR/U!V]acHS=B">
+                                                                  <field name="EVENT">click</field>
+                                                                  <field name="PARENT">TRUE</field>
+                                                                  <value name="ID">
+                                                                    <shadow type="text" id="b-_mJYC%c8ys?2UMu=hQ">
+                                                                      <field name="TEXT">paso14</field>
+                                                                    </shadow>
+                                                                  </value>
+                                                                  <statement name="DO">
+                                                                    <block type="execScript" id="oc/3ipg/WP-{O+AdiHCi" disabled="true">
+                                                                      <value name="TEXT">
+                                                                        <shadow type="textMultiline" id=".:13,U?~HQ!PRNe0wlXT">
+                                                                          <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                          <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:27 },'*');</field>
+                                                                        </shadow>
+                                                                      </value>
+                                                                      <next>
+                                                                        <block type="procedures_callnoreturn" id="wDD-l{fYc}f]t_WJ%}8)" disabled="true">
+                                                                          <mutation name="pasos">
+                                                                            <arg name="paso"></arg>
+                                                                            <arg name="img"></arg>
+                                                                            <arg name="camara"></arg>
+                                                                            <arg name="camara_direccion"></arg>
+                                                                            <arg name="objeto"></arg>
+                                                                          </mutation>
+                                                                          <value name="ARG0">
+                                                                            <block type="text" id="L^/TDCgdPq5/Q@eMB3-,">
+                                                                              <field name="TEXT">paso14</field>
+                                                                            </block>
+                                                                          </value>
+                                                                          <value name="ARG1">
+                                                                            <block type="text" id="P};RA$y#-_Kgnj2pnj0P">
+                                                                              <field name="TEXT">/images/09-1.png</field>
+                                                                            </block>
+                                                                          </value>
+                                                                          <value name="ARG4">
+                                                                            <block type="variables_get" id="PR;]u*Nwi:Ju0:T`n2om">
+                                                                              <field name="VAR" id="tr7uoZ7KT#?UhdPE`QFT">depositos_obj</field>
+                                                                            </block>
+                                                                          </value>
+                                                                        </block>
+                                                                      </next>
+                                                                    </block>
+                                                                  </statement>
+                                                                  <next>
+                                                                    <block type="eventHTMLElem" id="_@l46iY)*mSy=r5PJ{i7">
+                                                                      <field name="EVENT">click</field>
+                                                                      <field name="PARENT">TRUE</field>
+                                                                      <value name="ID">
+                                                                        <shadow type="text" id="a:S|79r!s3s%Sw[|R?!#">
+                                                                          <field name="TEXT">paso15</field>
+                                                                        </shadow>
+                                                                      </value>
+                                                                      <statement name="DO">
+                                                                        <block type="execScript" id="7QF!HGu%C(B3uYU2;bye">
+                                                                          <value name="TEXT">
+                                                                            <shadow type="textMultiline" id="4{fc[YO^yYzTJwZbC]Gs">
+                                                                              <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                              <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:28 },'*');</field>
+                                                                            </shadow>
+                                                                          </value>
+                                                                          <next>
+                                                                            <block type="procedures_callnoreturn" id="]C,]TE$fi}zf}3)IQ6Q(" disabled="true">
+                                                                              <mutation name="pasos">
+                                                                                <arg name="paso"></arg>
+                                                                                <arg name="img"></arg>
+                                                                                <arg name="camara"></arg>
+                                                                                <arg name="camara_direccion"></arg>
+                                                                                <arg name="objeto"></arg>
+                                                                              </mutation>
+                                                                              <value name="ARG0">
+                                                                                <block type="text" id="iaXMaE.;tEbdV}ojb.LK">
+                                                                                  <field name="TEXT">paso15</field>
+                                                                                </block>
+                                                                              </value>
+                                                                              <value name="ARG1">
+                                                                                <block type="text" id="yczn;%ann}~4g86@#rcn">
+                                                                                  <field name="TEXT">/images/10-1.png</field>
+                                                                                </block>
+                                                                              </value>
+                                                                              <value name="ARG2">
+                                                                                <block type="objectList" id=")1M*68+fnhrs3.b|(JNH">
+                                                                                  <field name="FIELDNAME">molienda_Pos06</field>
+                                                                                </block>
+                                                                              </value>
+                                                                              <value name="ARG3">
+                                                                                <block type="objectList" id="1LkQ%VidOSw0Dyi5K:IJ">
+                                                                                  <field name="FIELDNAME">molienda_Dir06</field>
+                                                                                </block>
+                                                                              </value>
+                                                                              <value name="ARG4">
+                                                                                <block type="objectList" id="MB#=Frh2;`3SPEK:Cjci">
+                                                                                  <field name="FIELDNAME">equipo_200_TK_0152</field>
+                                                                                </block>
+                                                                              </value>
+                                                                            </block>
+                                                                          </next>
+                                                                        </block>
+                                                                      </statement>
+                                                                      <next>
+                                                                        <block type="eventHTMLElem" id="Tp7#u~|Gl-5`l3=[HfJ-">
+                                                                          <field name="EVENT">click</field>
+                                                                          <field name="PARENT">TRUE</field>
+                                                                          <value name="ID">
+                                                                            <shadow type="text" id="!L|;d}EAN;*1R7%L}mV]">
+                                                                              <field name="TEXT">paso16</field>
+                                                                            </shadow>
+                                                                          </value>
+                                                                          <statement name="DO">
+                                                                            <block type="execScript" id="^lo6e8}ZIpc^;@a~dQ^!">
+                                                                              <value name="TEXT">
+                                                                                <shadow type="textMultiline" id="L3hD.EtpzV/-):70P}X~">
+                                                                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                                  <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:28 },'*');</field>
+                                                                                </shadow>
+                                                                              </value>
+                                                                              <next>
+                                                                                <block type="procedures_callnoreturn" id="t**g}rGwpEU1+4e,/(mA" disabled="true">
+                                                                                  <mutation name="pasos">
+                                                                                    <arg name="paso"></arg>
+                                                                                    <arg name="img"></arg>
+                                                                                    <arg name="camara"></arg>
+                                                                                    <arg name="camara_direccion"></arg>
+                                                                                    <arg name="objeto"></arg>
+                                                                                  </mutation>
+                                                                                  <value name="ARG0">
+                                                                                    <block type="text" id="EPvtWxaLN(FYU)qkir}9">
+                                                                                      <field name="TEXT">paso16</field>
+                                                                                    </block>
+                                                                                  </value>
+                                                                                  <value name="ARG1">
+                                                                                    <block type="text" id="#Qhm.b93znN{[j0hYXVB">
+                                                                                      <field name="TEXT">/images/10-1.png</field>
+                                                                                    </block>
+                                                                                  </value>
+                                                                                  <value name="ARG2">
+                                                                                    <block type="objectList" id="Qp?txCB#NKgaZ7=tP:t1">
+                                                                                      <field name="FIELDNAME">molienda_Pos06</field>
+                                                                                    </block>
+                                                                                  </value>
+                                                                                  <value name="ARG3">
+                                                                                    <block type="objectList" id="oKe[:r2qNOF}4I,$%%~/">
+                                                                                      <field name="FIELDNAME">molienda_Dir06</field>
+                                                                                    </block>
+                                                                                  </value>
+                                                                                  <value name="ARG4">
+                                                                                    <block type="objectList" id="k?Km{,gm2}=u]elps1He">
+                                                                                      <field name="FIELDNAME">equipo_200_TK_0171</field>
+                                                                                    </block>
+                                                                                  </value>
+                                                                                </block>
+                                                                              </next>
+                                                                            </block>
+                                                                          </statement>
+                                                                          <next>
+                                                                            <block type="eventHTMLElem" id="pyM8HmkAStvJ8vFc[6Y8">
+                                                                              <field name="EVENT">click</field>
+                                                                              <field name="PARENT">TRUE</field>
+                                                                              <value name="ID">
+                                                                                <shadow type="text" id="trc|wbDD(@hiZ3ru)bu~">
+                                                                                  <field name="TEXT">paso17</field>
+                                                                                </shadow>
+                                                                              </value>
+                                                                              <statement name="DO">
+                                                                                <block type="execScript" id="Howb_SchOg|KRi?LsI/@">
+                                                                                  <value name="TEXT">
+                                                                                    <shadow type="textMultiline" id="+7Z`R#Ko6n4F$@*H-j1=">
+                                                                                      <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                                      <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:29 },'*');</field>
+                                                                                    </shadow>
+                                                                                  </value>
+                                                                                  <next>
+                                                                                    <block type="procedures_callnoreturn" id="|q@!([`;Z#XUsm0NyDBZ" disabled="true">
+                                                                                      <mutation name="pasos">
+                                                                                        <arg name="paso"></arg>
+                                                                                        <arg name="img"></arg>
+                                                                                        <arg name="camara"></arg>
+                                                                                        <arg name="camara_direccion"></arg>
+                                                                                        <arg name="objeto"></arg>
+                                                                                      </mutation>
+                                                                                      <value name="ARG0">
+                                                                                        <block type="text" id="tYOB/_AV+X@]#ziZS$o*">
+                                                                                          <field name="TEXT">paso17</field>
+                                                                                        </block>
+                                                                                      </value>
+                                                                                      <value name="ARG1">
+                                                                                        <block type="text" id="EyAK,zrcY2o!6*:IysOb">
+                                                                                          <field name="TEXT">/images/11-1.png</field>
+                                                                                        </block>
+                                                                                      </value>
+                                                                                      <value name="ARG2">
+                                                                                        <block type="objectList" id="Q;,JHK-y3g)OK%R~iO*^">
+                                                                                          <field name="FIELDNAME">molienda_Pos07</field>
+                                                                                        </block>
+                                                                                      </value>
+                                                                                      <value name="ARG3">
+                                                                                        <block type="objectList" id="40bdnXnZ7yNW?qauG;4Y">
+                                                                                          <field name="FIELDNAME">molienda_Dir07</field>
+                                                                                        </block>
+                                                                                      </value>
+                                                                                      <value name="ARG4">
+                                                                                        <block type="objectList" id="A+]V)qN[SGv-Cw6OU=AS">
+                                                                                          <field name="FIELDNAME">equipo_200_PP_0156</field>
+                                                                                        </block>
+                                                                                      </value>
+                                                                                    </block>
+                                                                                  </next>
+                                                                                </block>
+                                                                              </statement>
+                                                                              <next>
+                                                                                <block type="eventHTMLElem" id="ObQ,a;7~`z{-`LGYr{{Q">
+                                                                                  <field name="EVENT">click</field>
+                                                                                  <field name="PARENT">TRUE</field>
+                                                                                  <value name="ID">
+                                                                                    <shadow type="text" id="$M8-ZVtwHu.LDhTeGzw^">
+                                                                                      <field name="TEXT">paso18</field>
+                                                                                    </shadow>
+                                                                                  </value>
+                                                                                  <statement name="DO">
+                                                                                    <block type="execScript" id="gx?%nm*@n#YQ.lFR+tAJ">
+                                                                                      <value name="TEXT">
+                                                                                        <shadow type="textMultiline" id="UHd/F]to@(1AK}6P:EiG">
+                                                                                          <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                                          <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:29 },'*');</field>
+                                                                                        </shadow>
+                                                                                      </value>
+                                                                                      <next>
+                                                                                        <block type="procedures_callnoreturn" id="Ze/?Tr%9]4p7D,A`}@|E" disabled="true">
+                                                                                          <mutation name="pasos">
+                                                                                            <arg name="paso"></arg>
+                                                                                            <arg name="img"></arg>
+                                                                                            <arg name="camara"></arg>
+                                                                                            <arg name="camara_direccion"></arg>
+                                                                                            <arg name="objeto"></arg>
+                                                                                          </mutation>
+                                                                                          <value name="ARG0">
+                                                                                            <block type="text" id="o$b^c8^@VxnAs~.v$1Wx">
+                                                                                              <field name="TEXT">paso18</field>
+                                                                                            </block>
+                                                                                          </value>
+                                                                                          <value name="ARG1">
+                                                                                            <block type="text" id=".hC2:toxsSrM%+!oZ{pi">
+                                                                                              <field name="TEXT">/images/11-1.png</field>
+                                                                                            </block>
+                                                                                          </value>
+                                                                                          <value name="ARG2">
+                                                                                            <block type="objectList" id=".?7heADeR}hw?oyJ:Nty">
+                                                                                              <field name="FIELDNAME">molienda_Pos07</field>
+                                                                                            </block>
+                                                                                          </value>
+                                                                                          <value name="ARG3">
+                                                                                            <block type="objectList" id="m,zcxVh/qJeVvyY5ToFC">
+                                                                                              <field name="FIELDNAME">molienda_Dir07</field>
+                                                                                            </block>
+                                                                                          </value>
+                                                                                          <value name="ARG4">
+                                                                                            <block type="objectList" id="zkL?r-/JXKd}h7hfegE,">
+                                                                                              <field name="FIELDNAME">equipo_200_PP_0158</field>
+                                                                                            </block>
+                                                                                          </value>
+                                                                                        </block>
+                                                                                      </next>
+                                                                                    </block>
+                                                                                  </statement>
+                                                                                  <next>
+                                                                                    <block type="eventHTMLElem" id="ddBAxY5;aTc;*rA}5CZn">
+                                                                                      <field name="EVENT">click</field>
+                                                                                      <field name="PARENT">TRUE</field>
+                                                                                      <value name="ID">
+                                                                                        <shadow type="text" id="1NX)@G]uRW5E!_ux#7`l">
+                                                                                          <field name="TEXT">paso19</field>
+                                                                                        </shadow>
+                                                                                      </value>
+                                                                                      <statement name="DO">
+                                                                                        <block type="execScript" id="Vkh`_,pZzoLYB$`)hBPh">
+                                                                                          <value name="TEXT">
+                                                                                            <shadow type="textMultiline" id="_q`UxW0iz4Wk7}JGvcY,">
+                                                                                              <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                                              <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:30 },'*');</field>
+                                                                                            </shadow>
+                                                                                          </value>
+                                                                                          <next>
+                                                                                            <block type="procedures_callnoreturn" id="/6%`pDvkb+@iFvor9qD^" disabled="true">
+                                                                                              <mutation name="pasos">
+                                                                                                <arg name="paso"></arg>
+                                                                                                <arg name="img"></arg>
+                                                                                                <arg name="camara"></arg>
+                                                                                                <arg name="camara_direccion"></arg>
+                                                                                                <arg name="objeto"></arg>
+                                                                                              </mutation>
+                                                                                              <value name="ARG0">
+                                                                                                <block type="text" id="Fx6f@3zsbS(L_f0B}T/4">
+                                                                                                  <field name="TEXT">paso2</field>
+                                                                                                </block>
+                                                                                              </value>
+                                                                                              <value name="ARG1">
+                                                                                                <block type="text" id="I=ttDTD1o:nDvYzO*s(c">
+                                                                                                  <field name="TEXT">/images/12-1.png</field>
+                                                                                                </block>
+                                                                                              </value>
+                                                                                              <value name="ARG2">
+                                                                                                <block type="objectList" id="v$gx+^^7Hg_y5yn)Am~$">
+                                                                                                  <field name="FIELDNAME">molienda_Pos14</field>
+                                                                                                </block>
+                                                                                              </value>
+                                                                                              <value name="ARG3">
+                                                                                                <block type="objectList" id="f^YeE|F(qu{yn]8O^NL3">
+                                                                                                  <field name="FIELDNAME">molienda_Dir14</field>
+                                                                                                </block>
+                                                                                              </value>
+                                                                                            </block>
+                                                                                          </next>
+                                                                                        </block>
+                                                                                      </statement>
+                                                                                      <next>
+                                                                                        <block type="eventHTMLElem" id="Mj!y@[55.n*@`tg3o9Qq">
+                                                                                          <field name="EVENT">click</field>
+                                                                                          <field name="PARENT">TRUE</field>
+                                                                                          <value name="ID">
+                                                                                            <shadow type="text" id="jUh)7bY)EuLB7W^pi/]C">
+                                                                                              <field name="TEXT">paso20</field>
+                                                                                            </shadow>
+                                                                                          </value>
+                                                                                          <statement name="DO">
+                                                                                            <block type="execScript" id="_}r3II|]jp|{i9d/4tjh">
+                                                                                              <value name="TEXT">
+                                                                                                <shadow type="textMultiline" id="aVYgqn;rRZ)63j3%qs?y">
+                                                                                                  <field name="HIGHLIGHT_MODE">javascript</field>
+                                                                                                  <field name="TEXT" editor-height="2" editor-width="520">window.parent.postMessage({param1: 1, param2:31 },'*');</field>
+                                                                                                </shadow>
+                                                                                              </value>
+                                                                                              <next>
+                                                                                                <block type="procedures_callnoreturn" id="n3Fh+./F/Lfp^Axz#jDj" disabled="true">
+                                                                                                  <mutation name="pasos">
+                                                                                                    <arg name="paso"></arg>
+                                                                                                    <arg name="img"></arg>
+                                                                                                    <arg name="camara"></arg>
+                                                                                                    <arg name="camara_direccion"></arg>
+                                                                                                    <arg name="objeto"></arg>
+                                                                                                  </mutation>
+                                                                                                  <value name="ARG0">
+                                                                                                    <block type="text" id="AGT8W^@IPg2lNVAcEe$s">
+                                                                                                      <field name="TEXT">paso2</field>
+                                                                                                    </block>
+                                                                                                  </value>
+                                                                                                  <value name="ARG1">
+                                                                                                    <block type="text" id="td{6kzvtPW2dx/t]Ux*,">
+                                                                                                      <field name="TEXT">/images/13-1.png</field>
+                                                                                                    </block>
+                                                                                                  </value>
+                                                                                                  <value name="ARG2">
+                                                                                                    <block type="objectList" id=",a![hO?iPZ;P570OO/Sw">
+                                                                                                      <field name="FIELDNAME">molienda_Pos14</field>
+                                                                                                    </block>
+                                                                                                  </value>
+                                                                                                  <value name="ARG3">
+                                                                                                    <block type="objectList" id="_sHNi93N08;+BB}%O6`^">
+                                                                                                      <field name="FIELDNAME">molienda_Dir14</field>
+                                                                                                    </block>
+                                                                                                  </value>
+                                                                                                </block>
+                                                                                              </next>
+                                                                                            </block>
+                                                                                          </statement>
+                                                                                        </block>
+                                                                                      </next>
+                                                                                    </block>
+                                                                                  </next>
+                                                                                </block>
+                                                                              </next>
+                                                                            </block>
+                                                                          </next>
+                                                                        </block>
+                                                                      </next>
+                                                                    </block>
+                                                                  </next>
+                                                                </block>
+                                                              </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="hide" id="(saK!szE;gJhQ0:7k/l+" disabled="true" x="790" y="-130">
+      <value name="VALUE">
+        <shadow type="objectList" id="(rTU6_E:=3?l~tcjw%bE">
+          <field name="FIELDNAME">terreno_mesh</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenClicked" id="d9|u*bZJPTZC3KRB:0kG" inline="false" x="885" y="342">
+      <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+      <field name="X_RAY">FALSE</field>
+      <field name="DOUBLE_CLICK">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <shadow type="objectList" id="6J@fCtpOr4tLA5wovkgj">
+          <field name="FIELDNAME">oscar</field>
+        </shadow>
+        <block type="objectList" id="bbEn/qCMI$4iYF,{R-cg">
+          <field name="FIELDNAME">oscar</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="zoomCameraToObject" id="E_12Q$[imjMI3crR/?:;">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" whenfinishedslot="false"></mutation>
+          <value name="OBJECT">
+            <shadow type="objectList" id=".`0_}K`+d|(hC[.O{%Q/">
+              <field name="FIELDNAME">oscar</field>
+            </shadow>
+          </value>
+          <value name="DURATION">
+            <shadow type="math_number" id="e]KotN%F2v33,gQMouX!">
+              <field name="NUM">2</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1109.4" viewport-y="37" viewport-w="751.6" viewport-h="464" viewport-hidden="true" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

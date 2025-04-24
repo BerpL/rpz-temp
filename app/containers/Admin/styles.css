@@ -1,0 +1,64 @@
+.react-confirm-alert-overlay {
+  background: #525252e6;
+}
+
+.react-confirm-alert-body {
+  text-align: center;
+}
+
+.react-confirm-alert-body h1 {
+  font-weight: bold;
+}
+
+.react-confirm-alert-button-group {
+  justify-content: space-evenly;
+}
+
+.react-confirm-alert-button-group button {
+  transition: all 0.3s ease;
+}
+
+.react-confirm-alert-button-group button:first-child {
+  background-color: #af083a;
+}
+
+.react-confirm-alert-button-group button:first-child:hover {
+  background-color: #750527;
+}
+
+.react-confirm-alert-button-group button:last-child:hover {
+  background-color: #3d3d3d;
+}
+
+
+.containerSaved{
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgb(119, 241, 88);
+  border-radius: 5px;
+  animation: disappear 4.2s ease-out;
+}
+
+.contentSaved{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+@keyframes disappear {
+  0% {bottom: 100px;}
+  5% {bottom: 10px;}
+  15% {bottom: 50px;}
+  17% {bottom: 50px;}
+  22% {bottom: 10px;}
+  32% {bottom: 25px;}
+  31% {bottom: 25px;}
+  36% {bottom: 10px; background-color: rgb(132, 241, 104);}
+  100%{background-color: rgba(98, 241, 62, 0);}
+}
