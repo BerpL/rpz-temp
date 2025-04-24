@@ -3,8 +3,8 @@
   "version": "3.7.0",
   "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "engines": {
-    "npm": ">=5",
-    "node": ">=8.10.0"
+  "node": "14.x",
+  "npm": ">=5"
   },
   "author": "",
   "scripts": {
